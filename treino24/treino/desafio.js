@@ -47,5 +47,3 @@ function multiplicacao (num) {
 }
 multiplicacao (5);
 
-
-fghfdfdh
