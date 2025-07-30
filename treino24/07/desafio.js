@@ -46,3 +46,6 @@ function multiplicacao (num) {
 	console.log (multi)
 }
 multiplicacao (5);
+
+
+fghfdfdh
