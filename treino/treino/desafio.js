@@ -16,7 +16,7 @@ saudacao('João');*/
 
 /*function dobro(numero) {
     let resultado = numero * 2;
-    console.log(resu);
+    console.log(resultado);
 }
 dobro(5);*/
 
@@ -41,9 +41,23 @@ maiorNum(10, 20);*/
 
 // 06 Criar uma função que recebe um número como parâmetro e retorna o resultado da multiplicação desse número por ele mesmo
 
-function multiplicacao (num) {
+/*function multiplicacao (num) {
 	let multi = num * num;
 	console.log (multi)
 }
-multiplicacao (5);
+multiplicacao (5);*/
+
+
+
+// DESAFIO 2
+
+
+// 01 Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que serão recebidos como parâmetro.
+
+function calcularimc (altura, peso) {
+     let imc = peso / (altura * altura);
+     console.log(imc);
+}
+
+calcularimc(1.71, 63);
 
