@@ -68,8 +68,8 @@ function fatorial(num) {
      else if (num == 1)
         return 1;
      else {
-        return num * fatorial(num -1);
+        let fator = (num * fatorial(num -1));
     }
-    
+    console.log('O fatorial de ' + num + ' é: ' + fator);
 }
 fatorial(5);
