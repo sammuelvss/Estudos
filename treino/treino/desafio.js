@@ -63,11 +63,11 @@ calcularimc(1.71, 63);*/
 // 02 Crie uma função que calcule o valor do fatorial de um número passado como parâmetro.
 
 function fatorial(num) {
-    if (num > 0) 
+    if (num > 0) {
         return -1;
-     else if (num == 1)
+    } else if (num == 1)  {
         return 1;
-     else {
+    } else {
         let fator = (num * fatorial(num -1));
     }
     console.log('O fatorial de ' + num + ' é: ' + fator);
