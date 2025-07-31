@@ -54,10 +54,22 @@ multiplicacao (5);*/
 
 // 01 Crie uma função que calcule o índice de massa corporal (IMC) de uma pessoa, a partir de sua altura, em metros, e peso, em quilogramas, que serão recebidos como parâmetro.
 
-function calcularimc (altura, peso) {
+/*function calcularimc (altura, peso) {
      let imc = peso / (altura * altura);
-     console.log(imc);
+     console.log('Seu IMC é: ' + imc.toFixed(2));
 }
+calcularimc(1.71, 63);*/
 
-calcularimc(1.71, 63);
+// 02 Crie uma função que calcule o valor do fatorial de um número passado como parâmetro.
 
+function fatorial(num) {
+    if (num > 0) 
+        return -1;
+     else if (num == 1)
+        return 1;
+     else {
+        return num * fatorial(num -1);
+    }
+    
+}
+fatorial(5);
