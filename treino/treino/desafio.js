@@ -82,10 +82,46 @@ console.log(`O fatorial de ${numero} é ${resultado}`);*/
 // 03 Crie uma função que converte um valor em dólar, passado como parâmetro, e retorna o valor equivalente em reais.
 //  Para isso, considere a cotação do dólar igual a R$4,80.
 
-function converterDolarParaReal(valorDolar) {
-let dolarparareal = valordolar * 4.80;
-console.log(`O valor em reais é: R$ ${dolarparareal}`);
+/*function converterDolarParaReal(valorDolar) {
+let dolarparareal = valorDolar * 4.80;
+console.log(`O valor em reais é: R$ ${dolarparareal.toFixed(2)}`);
 
 }
 
-converterDolarParaReal(2);
+converterDolarParaReal(2);*/
+
+// 04 Crie uma função que mostre na tela a área e o perímetro de uma sala retangular, utilizando altura e largura que serão dadas como parâmetro.
+
+/*function calculodeareaeperimetro (altura, largura) {
+   let area = altura * largura;
+   let perimetro = 2 * (altura + largura);
+   console.log ('A area é = ' + area + ' e o perimetro é = ' + perimetro);
+}
+calculodeareaeperimetro(5, 10);*/
+
+// 05 Crie uma função que mostre na tela a área e o perímetro de uma sala circular, utilizando seu raio que será fornecido
+//  como parâmetro. Considere Pi = 3,14.
+
+/*function salaCircular (raio) {
+let pi = 3.14;
+let area = pi * (raio * raio);
+let perimetro = 2 * pi * raio;
+console.log ('a área é = ' + area + ' e perimetro é = ' + perimetro);
+
+}
+
+salaCircular (4);*/
+
+// 06 Crie uma função que mostre na tela a tabuada de um número dado como parâmetro.
+
+function tabuada (numero) {
+let vezes = 0;
+do {
+let tabu = numero * vezes
+vezes++;
+console.log (tabu);
+} while (vezes <= 10);
+
+}
+
+tabuada(2);
