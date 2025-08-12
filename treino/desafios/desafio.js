@@ -114,7 +114,7 @@ salaCircular (4);*/
 
 // 06 Crie uma função que mostre na tela a tabuada de um número dado como parâmetro.
 
-function tabuada (numero) {
+/*function tabuada (numero) {
 let vezes = 0;
 do {
 let tabu = numero * vezes
@@ -124,4 +124,22 @@ console.log (tabu);
 
 }
 
-tabuada(2);
+tabuada(2);*/
+
+
+// 07
+
+function dados (){
+
+let resp;
+do {
+console.log ('OLÁ DIGITE SEUS DADOS AQUI:');
+let nome = prompt('digite o seu nome:');
+let idade = prompt('digite sua idade');
+alert(`Oi ${nome} tudo bem? você tem ${idade} anos.`);
+let resp = prompt('para sair digite [1] :');
+} while (resp != 1);
+
+}
+
+dados();
