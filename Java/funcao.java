@@ -1,4 +1,4 @@
-package treino.desafios;
+package Java;
 
 import java.util.Scanner;
 
