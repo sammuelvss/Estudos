@@ -99,30 +99,36 @@ public class lista0 {
     System.out.println("digite o ano:");
     int ano = ler.nextInt();
     
-    int maxDiaMes;
+    int maxDiaMes = 0;
     boolean bissexto;
+    
     if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0){
         bissexto = true;
-        System.out.println("o ano é bissexto");
+        System.out.println("\no ano é bissexto");
     } else {
         bissexto = false;
-        System.out.println("o ano não é bissexto");
+        System.out.println("\no ano não é bissexto");
     }
-    if (bissexto == true && mes == 2){
+        if (bissexto == true && mes == 2){
         maxDiaMes = 29;
-    } else if (mes == 2){
+        } else if (mes == 2){
         maxDiaMes = 28;
         } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
             maxDiaMes = 30;
-        } else {
+        } else if (mes == 1 || mes == 3 || mes == 5 || mes == 7 || mes == 8 || mes == 10 || mes == 12){
             maxDiaMes = 31;
+        } else {
+            System.out.println("mês inválido");
         }
-
-        if (dia <= 0 && dia > maxDiaMes){
+        
+        if (dia <= 0 || dia > maxDiaMes) {
             System.out.println("data inválida");
+             throw new IllegalArgumentException("dia inválido para o mês");
         } else {
             System.out.println("data válida");
         }
+        
+        
 
         if (dia >= 21 && mes == 3 || dia <= 19 && mes == 4) {
             System.out.println("áries");
@@ -151,6 +157,8 @@ public class lista0 {
         } else {
             System.out.println("data inválida");
         }
+
+
 
     }
 }
