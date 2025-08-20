@@ -1,5 +1,5 @@
 
-import java.util.Scanner;
+/*import java.util.Scanner;
 public class vetor {
     public static void main(String[] args) {
         int v[] = new int[5];
@@ -9,4 +9,4 @@ public class vetor {
 
         }
     }
-}
+}*/

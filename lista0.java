@@ -1,5 +1,6 @@
-package Java;
+//package Java;
 import java.util.Scanner;
+
 
 public class lista0 {
     public static void main(String[] args) {
@@ -98,16 +99,58 @@ public class lista0 {
     System.out.println("digite o ano:");
     int ano = ler.nextInt();
     
-    boolean maxDiaMes;
+    int maxDiaMes;
     boolean bissexto;
-    if (ano % 4 = 0 && ano % 100 = 0 && ano % 400 = 0){
+    if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0){
         bissexto = true;
         System.out.println("o ano é bissexto");
-    } 
+    } else {
+        bissexto = false;
+        System.out.println("o ano não é bissexto");
+    }
+    if (bissexto == true && mes == 2){
+        maxDiaMes = 29;
+    } else if (mes == 2){
+        maxDiaMes = 28;
+        } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11){
+            maxDiaMes = 30;
+        } else {
+            maxDiaMes = 31;
+        }
 
-    if
+        if (dia <= 0 && dia > maxDiaMes){
+            System.out.println("data inválida");
+        } else {
+            System.out.println("data válida");
+        }
 
-
+        if (dia >= 21 && mes == 3 || dia <= 19 && mes == 4) {
+            System.out.println("áries");
+        }else if (dia >= 20 && mes == 4 || dia <= 20 && mes == 5) {
+            System.out.println("touro");
+        } else if (dia >= 21 && mes == 5 || dia <= 20 && mes == 6) {
+            System.out.println("gêmeos");
+        } else if (dia >= 21 && mes == 6 || dia <= 22 && mes == 7) {
+            System.out.println("câncer");
+        } else if (dia >= 23 && mes == 7 || dia <= 22 && mes == 8) {
+            System.out.println("leão");
+        } else if (dia >= 23 && mes == 8 || dia <= 22 && mes == 9) {
+            System.out.println("virgem");
+        } else if (dia >= 23 && mes == 9 || dia <= 22 && mes == 10) {
+            System.out.println("libra");
+        } else if (dia >= 23 && mes == 10 || dia <= 21 && mes == 11) {
+            System.out.println("escorpião");
+        } else if (dia >= 22 && mes == 11 || dia <= 21 && mes == 12) {
+            System.out.println("sagitário");
+        } else if (dia >= 22 && mes == 12 || dia <= 19 && mes == 1) {
+            System.out.println("capricórnio");
+        } else if (dia >= 20 && mes == 1 || dia <= 18 && mes == 2) {
+            System.out.println("aquário");
+        } else if (dia >= 19 && mes == 2 || dia <= 20 && mes ==3) {
+            System.out.println("peixes");
+        } else {
+            System.out.println("data inválida");
+        }
 
     }
 }
