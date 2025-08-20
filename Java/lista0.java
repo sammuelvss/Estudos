@@ -98,11 +98,14 @@ public class lista0 {
     System.out.println("digite o ano:");
     int ano = ler.nextInt();
     
-    if (dia >= 21 && dia <= 19 && mes == 3 || mes == 4) {
-        System.out.println("ARIES");
-    } else if (dia >= 20 && dia <= 20 && mes == 4 || mes == 5 ){
-        System.out.println("TOURO");
-    }
+    boolean maxDiaMes;
+    boolean bissexto;
+    if (ano % 4 = 0 && ano % 100 = 0 && ano % 400 = 0){
+        bissexto = true;
+        System.out.println("o ano é bissexto");
+    } 
+
+    if
 
 
 
