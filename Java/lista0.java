@@ -193,13 +193,32 @@ public class lista0 {
         int peso = 0;
         while (peso <= pesoMax){
             int livro = ler.nextInt();
-            peso = peso + livro;
-            cont++;
-            if (peso == 18) {
-                System.out.println(cont);
+            peso += livro;
+            if (peso <= 18) {
+                cont++;
+            } 
+             System.out.println(cont);
+        }
+         /*int livros = 0;
+        int peso = 0;
+
+        while (peso < 18) {
+            peso += sc.nextInt();
+            if (peso <= 18) {
+                livros++;
             }
         }
+        System.out.println(livros);*/
+
+
+
+
+        //QUESTÃO 06
+
+
+
+
+
     }
 }
-
 
