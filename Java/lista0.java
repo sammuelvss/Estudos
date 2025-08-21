@@ -1,5 +1,7 @@
 package Java;
 
+import java.util.Scanner;
+
 public class lista0 {
     public static void main(String[] args) {
 
@@ -187,19 +189,17 @@ public class lista0 {
 
         Scanner ler = new Scanner(System.in);
         int pesoMax = 18;
-        for (int i = 0; i >= 0; i++) {
-        System.out.println("digite o peso do livro");
-        int peso = ler.nextInt();
-        int pesoTotal = peso;
-        cont++;
-        if (pesoTotal = pesoMax){
-            break;
-            System.out.println(cont);
+        int cont = 0;
+        int peso = 0;
+        while (peso <= pesoMax){
+            int livro = ler.nextInt();
+            peso = peso + livro;
+            cont++;
+            if (peso == 18) {
+                System.out.println(cont);
+            }
         }
-        }
-       
-
-        
     }
 }
+
 
