@@ -1,6 +1,4 @@
 package Java;
-import java.util.Scanner;
-
 
 public class lista0 {
     public static void main(String[] args) {
@@ -91,7 +89,7 @@ public class lista0 {
     //QUESTÃO 4
 
 
-    Scanner ler = new Scanner(System.in);
+    /*Scanner ler = new Scanner(System.in);
     System.out.println("digite o dia:");
     int dia = ler.nextInt();
     System.out.println("digite o mês:");
@@ -156,9 +154,52 @@ public class lista0 {
             System.out.println("peixes");
         } else {
             System.out.println("data inválida");
+        }*/
+
+
+
+
+
+        //QUESTÃO 05
+
+
+
+        /*Scanner ler = new Scanner(System.in);
+        System.out.println("digite o ano da 1ª dose:");
+        int dose1 = ler.nextInt();
+        System.out.println("digite o intervalo de tempo:");
+        int intervalo = ler.nextInt();
+        if (intervalo > 0){
+            int dose2 = dose1 + intervalo;
+            int dose3 = dose2 + intervalo;
+            int dose4 = dose3 + intervalo;
+            System.out.println("a proximas doses serão no anos: " + dose2 + " , " + dose3 + " , " + dose4 );
+        } else {
+            System.out.println("Número de intervalos inválido, digite um número maior que 0/zero");
+        }*/
+        
+    
+
+
+        //QUESTÃO 06
+
+
+
+        Scanner ler = new Scanner(System.in);
+        int pesoMax = 18;
+        for (int i = 0; i >= 0; i++) {
+        System.out.println("digite o peso do livro");
+        int peso = ler.nextInt();
+        int pesoTotal = peso;
+        cont++;
+        if (pesoTotal = pesoMax){
+            break;
+            System.out.println(cont);
         }
+        }
+       
 
         
-
     }
 }
+
