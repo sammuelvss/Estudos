@@ -123,7 +123,7 @@ public class lista0 {
         
         if (dia <= 0 || dia > maxDiaMes) {
             System.out.println("data inválida");
-             throw new IllegalArgumentException("dia inválido para o mês");
+            throw new IllegalArgumentException("dia inválido para o mês");
         } else {
             System.out.println("data válida");
         }
@@ -158,7 +158,7 @@ public class lista0 {
             System.out.println("data inválida");
         }
 
-
+        
 
     }
 }
