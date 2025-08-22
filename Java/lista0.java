@@ -1,7 +1,6 @@
 package Java;
 
 import java.util.Scanner;
-
 public class lista0 {
     public static void main(String[] args) {
 
@@ -91,17 +90,17 @@ public class lista0 {
     //QUESTÃO 4
 
 
-    /*Scanner ler = new Scanner(System.in);
+    Scanner ler = new Scanner(System.in);
     System.out.println("digite o dia:");
     int dia = ler.nextInt();
     System.out.println("digite o mês:");
     int mes = ler.nextInt();
     System.out.println("digite o ano:");
     int ano = ler.nextInt();
-    
+
     int maxDiaMes = 0;
     boolean bissexto;
-    
+
     if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0){
         bissexto = true;
         System.out.println("\no ano é bissexto");
@@ -120,15 +119,15 @@ public class lista0 {
         } else {
             System.out.println("mês inválido");
         }
-        
+
         if (dia <= 0 || dia > maxDiaMes) {
             System.out.println("data inválida");
             throw new IllegalArgumentException("dia inválido para o mês");
         } else {
             System.out.println("data válida");
         }
-        
-        
+
+
 
         if (dia >= 21 && mes == 3 || dia <= 19 && mes == 4) {
             System.out.println("áries");
@@ -156,7 +155,7 @@ public class lista0 {
             System.out.println("peixes");
         } else {
             System.out.println("data inválida");
-        }*/
+        }
 
 
 
@@ -179,15 +178,15 @@ public class lista0 {
         } else {
             System.out.println("Número de intervalos inválido, digite um número maior que 0/zero");
         }*/
-        
-    
+
+
 
 
         //QUESTÃO 06
 
 
 
-        Scanner ler = new Scanner(System.in);
+        /*Scanner ler = new Scanner(System.in);
         int pesoMax = 18;
         int cont = 0;
         int peso = 0;
@@ -196,9 +195,9 @@ public class lista0 {
             peso += livro;
             if (peso <= 18) {
                 cont++;
-            } 
+            }
              System.out.println(cont);
-        }
+        }*/
          /*int livros = 0;
         int peso = 0;
 
@@ -213,7 +212,7 @@ public class lista0 {
 
 
 
-        //QUESTÃO 06
+        //QUESTÃO 07
 
 
 
