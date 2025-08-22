@@ -1,6 +1,4 @@
 
-
-import java.util.Scanner;
 public class lista0 {
     public static void main(String[] args) {
 
@@ -90,7 +88,7 @@ public class lista0 {
     //QUESTÃO 4
 
 
-    Scanner ler = new Scanner(System.in);
+    /*Scanner ler = new Scanner(System.in);
     System.out.println("digite o dia:");
     int dia = ler.nextInt();
     System.out.println("digite o mês:");
@@ -155,7 +153,7 @@ public class lista0 {
             System.out.println("peixes");
         } else {
             System.out.println("data inválida");
-        }
+        }*/
 
 
 
@@ -213,6 +211,13 @@ public class lista0 {
 
 
         //QUESTÃO 07
+
+
+
+
+
+
+
 
 
 
