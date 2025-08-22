@@ -2,7 +2,7 @@
 body{
 
 text-align: center;
-background-color: rgb(236, 220, 198);
+background-color: rgb(245, 233, 165);
 }
 a {
 
@@ -16,14 +16,14 @@ color: rgb(231, 182, 22);
   font-weight: 50px;
   font-size: 50px;
   font-style: italic;
-  text-shadow: 10px 15px 20px #000000b9; 
+  text-shadow: 10px 15px 20px #000000b9;
 
 }
 
 .header {
-  text-align: center;               /* Centraliza todo o conteúdo dentro do cabeçalho */
-  margin-bottom: 20px;     
-background-color: rgb(107, 107, 107);
+  text-align: center;
+  margin-bottom: 20px;
+  background-color: rgb(107, 107, 107);
 
 
 }
@@ -71,4 +71,72 @@ background-color: rgb(107, 107, 107);
 background-size: cover;
 
 }
+
+.container {
+
+justify-content: center;
+justify-items: center;
+text-align: center;
+
+
+
+}
+
+li {
+list-style-type: none;
+padding-left: 20px;
+position: relative;
+text-align: justify;
+
+
+
+}
+
+li::before {
+    content: "😜"; /* Ou outro caractere */
+  }
+
+  button {
+
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    border-color: rgba(248, 248, 248, 0);
+    box-shadow: 0 9px 8px rgba(0,0,0,0.5);
+
+  }
+
+  #meuBotao {
+
+    background-color: rgb(230, 222, 113);
+    background-size: 40px;
+    font-family: Arial;
+    border-radius: 30px;
+    color: rgb(0, 0, 0);
+    font-size: large;
+
+
+  }
+   @media print{
+    #meuBotao{
+        display: none;
+        visibility: none;
+    }
+   }
+
+   #meuBotao:hover{
+    background-color: rgb(224, 137, 37);
+    transition: color 0.8s;
+   }
+
+
+
+
+
+
+
+
+
+
+
 
