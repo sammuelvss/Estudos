@@ -2,7 +2,7 @@
 body{
 
 text-align: center;
-background-color: rgb(245, 233, 165);
+background-color: rgb(247, 240, 202);
 }
 a {
 
@@ -114,7 +114,7 @@ li::before {
     border-radius: 30px;
     color: rgb(0, 0, 0);
     font-size: large;
-
+    font-weight: 55px;
 
   }
    @media print{
@@ -127,7 +127,10 @@ li::before {
    #meuBotao:hover{
     background-color: rgb(224, 137, 37);
     transition: color 0.8s;
-   }
+    transform: translateY(-5px);
+
+
+    }
 
 
 
