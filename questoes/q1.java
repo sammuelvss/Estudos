@@ -1,11 +1,10 @@
-package Java.questões;
-
+package questoes;
 
 
 
 import java.util.Scanner;
 
-public class  q1{
+public class  q1 {
 
 public static void main(String[] args) {
 Scanner ler = new Scanner(System.in);

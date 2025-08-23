@@ -1,13 +1,13 @@
-package JavaIDE.questões;
+package questoes;
 
 
 import java.util.Scanner;
 
 public class q4 {
-        public static void main(String[] args) {
+public static void main(String[] args) {
 Scanner ler = new Scanner(System.in);
         System.out.println("Digite 10 números inteiros:");
-  int[] v = new int[10];
+int[] v = new int[10];
       
 for (int i = 0; i < 10; i++) {
 v[i]= ler.nextInt();

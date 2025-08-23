@@ -1,4 +1,4 @@
-package JavaIDE.questões;
+package questoes;
 
 
 

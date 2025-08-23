@@ -1,4 +1,4 @@
-package JavaIDE.questões;
+package questoes;
 
 
 public class q3 {
