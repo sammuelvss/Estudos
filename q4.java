@@ -11,7 +11,7 @@ Scanner ler = new Scanner(System.in);
 for (int i = 0; i < 10; i++) {
 v[i]= ler.nextInt();
 }
-for (int i = 0; i < v.length-1; i++) {
+for (int i = 0; i <= v.length-1; i++) {
     int par = v[i] % 2;
     if (par == 0) {
         System.out.println("Número par: " + v[i]);
