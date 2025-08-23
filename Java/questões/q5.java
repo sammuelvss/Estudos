@@ -1,5 +1,5 @@
 //import java.util.Scanner;
-
+package JavaIDE.questões;
 public class q5 {
     public static void main(String[] args) {
       
