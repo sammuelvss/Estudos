@@ -1,5 +1,5 @@
 
-package Java;
+package listas;
 
 public class lista0 {
     public static void main(String[] args) {
@@ -198,6 +198,7 @@ public class lista0 {
             }
              System.out.println(cont);
         }*/
+
          /*int livros = 0;
         int peso = 0;
 
@@ -215,20 +216,37 @@ public class lista0 {
         //QUESTÃO 07
 
 
-        Scanner ler = new Scanner(System.in);
-        int lado = ler .nextInt();
-        for (int i =  0; i < lado; i++) {
+        /*Scanner ler = new Scanner(System.in);
+        System.out.println("digite o lado do quadrado:");
+        int lado = ler.nextInt();
+        System.out.println("Quadrado de lado " + lado + ":");
+        for (int i = 0; i < lado; i++) { 
+            System.out.println("");  
+        
+        for (int j =  0; j < lado; j++) {  
             System.out.print("*");
-        }
-
-
-
-
-
-
-
-
-
+          }
     }
-}
+        System.out.println("");*/
+
+
+
+
+            int lado = 6;
+           
+
+                
+                for (int j = 0; j < lado; j++) {
+                    
+                     System.out.println("");
+                }
+            for (int i = 0; i < lado; i--) {
+                    System.out.print("*");
+                   }
+
+
+
+
+        }
+    }
 
