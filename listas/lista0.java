@@ -232,20 +232,24 @@ public class lista0 {
 
 
 
-            int lado = 6;
-           
-
-                
-                for (int j = 0; j < lado; j++) {
-                    
-                     System.out.println("");
-                }
-            for (int i = 0; i < lado; i--) {
+        int lado = 5;
+         System.out.println("Quadrado de lado " + lado + ":");
+           for (int k = lado; k > 0; k--) {
+                    System.out.println();
+                     for (int y = k; y < lado; y++) {
                     System.out.print("*");
-                   }
+                }
+            }
 
 
-
+                for (int i = 0; i < lado; i++) {
+                    System.out.println();
+                     for (int j = i; j < lado; j++) {
+                    System.out.print("*");
+                   
+                }
+            }
+                System.out.println();
 
         }
     }
