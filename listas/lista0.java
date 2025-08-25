@@ -232,6 +232,11 @@ public class lista0 {
 
 
 
+
+        //QUESTÃO 08
+
+
+
         int lado = 5;
          System.out.println("Quadrado de lado " + lado + ":");
            for (int k = lado; k > 0; k--) {
