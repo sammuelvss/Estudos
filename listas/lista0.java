@@ -237,8 +237,8 @@ public class lista0 {
 
 
 
-        int lado = 5;
-         System.out.println("Quadrado de lado " + lado + ":");
+        int lado = 10;
+         System.out.println("triangulo de lado " + lado + ":");
            for (int k = lado; k > 0; k--) {
                     System.out.println();
                      for (int y = k; y < lado; y++) {
