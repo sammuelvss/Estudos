@@ -38,13 +38,6 @@ console.log("vamos ficar em casa:",ficarEmCasa);*/
 
 
 
-
-
-
-
-
-
-
 var texto = window.confirm("escolha uma");
 window.alert("você selecionou: " + texto);
 
