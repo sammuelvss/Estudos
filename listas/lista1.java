@@ -1,9 +1,9 @@
 package listas;
 
-
 import java.util.Scanner;
+
 public class lista1 {
-    
+
 public static void main(String[] args) {
     
 
@@ -34,13 +34,13 @@ public static void main(String[] args) {
     //questão 03
 
     /*Scanner ler = new Scanner(System.in);
-    int [] numeros = new int [10];
-    for (int i = 0; i < numeros.length; i++) {
-        numeros[i] = ler.nextInt();   
+    int [] nomes = new int [10];
+    for (int i = 0; i < nomes.length; i++) {
+     nomes[i] = ler.nextInt();   
      }
-     for (int i =0; i < numeros.length; i++){  
-         if (numeros[i] % 2 == 0){
-                System.out.print(numeros[i] + ",");
+     for (int i =0; i < nomes.length; i++){  
+         if  nomes[i] % 2 == 0){
+                System.out.print nomes[i] + ",");
          }
     }
     System.out.println();*/
@@ -50,9 +50,240 @@ public static void main(String[] args) {
     
     //questão 04
 
+/*Scanner ler = new Scanner(System.in);
+    String [] nomes = new String [15];
+    for (int i = 0; i < nomes.length; i++) {
+        nomes[i] = ler.nextLine();   
+    }
+System.out.println();
+
+for (int i = nomes.length-1; i >= 0  ; i--){  
+            System.out.println(nomes[i]);
+        }*/
 
 
 
+
+    //questão 05
+
+
+
+    /*Scanner ler = new Scanner(System.in);
+    int numeros[] = new int[10];
+    for (int i = 0; i < numeros.length; i++) {
+        numeros[i] = ler.nextInt();   
+    }
+
+    System.out.println();
+    System.out.println("números impares: ");
+    for (int i = 0; i < numeros.length; i++){  
+        if  (numeros[i] % 2 != 0){
+            System.out.print(numeros[i] + ",");
+        } 
+    }
+    System.out.println();
+    System.out.println("números pares: ");
+    for (int i = 0; i < numeros.length; i++){  
+        if  (numeros[i] % 2 == 0){
+            System.out.print(numeros[i] + ",");
+        } 
+    }*/
+
+
+
+    //questão 06
+    /*Scanner ler = new Scanner(System.in);
+    String[] nomes = new String[10];
+    int [] idades = new int[10];
+    double media = 0;
+    for (int i = 0; i < idades.length; i++) {
+        System.out.println("Digite o nome: ");
+        nomes[i] = ler.next();
+        System.out.println("Digite a idade: ");
+        idades[i] = ler.nextInt();
+        nomes[i].equals(idades[i]);
+    }
+    System.out.println();
+
+
+    for (int i = 0; i < idades.length; i++){
+        media = media + idades[i];
+    }
+
+    media = media / idades.length;
+    System.out.println("A média das idades é: " + media);
+
+
+    for (int i = 0; i < idades.length; i++){
+    if(idades[i] > media){
+        System.out.println("Nomes com idade acima da média: " + nomes[i]);
+        }
+    }*/
+
+
+    //questão 07
+
+
+    /*Scanner ler = new Scanner(System.in);
+    int [] a = new int [10];
+    int [] b = new int [10];
+    int [] c = new int [20];
+
+    for (int i = 0; i < a.length; i++) {
+        a[i] = ler.nextInt();  
+    } 
+       for (int i = 0; i < b.length; i++) {
+        b[i] = ler.nextInt();
+    }
+    System.out.println();
+    for (int i = 0; i < a.length; i++){
+        c[i] = a[i];
+        System.out.print(c[i] + ",");
+        c[i] = b[i];
+        System.out.print(c[i] + ",");
+    }*/
+
+
+
+    //questão 08
+
+    /*Scanner ler = new Scanner(System.in);
+    int [] a = new int [10];
+    int [] b = new int [10];
+    int [] c = new int [10];
+    for (int i = 0; i < a.length; i++) {
+        a[i] = ler.nextInt();  
+    } 
+       for (int i = 0; i < b.length; i++) {
+        b[i] = ler.nextInt();
+    }
+
+
+    System.out.println();
+
+    for (int i = 0; i < a.length; i++){
+        if (a[i] % 2 == 0){
+            c[i] = a[i];
+        } else{
+            c[i] = b[i];
+        }
+        System.out.print(c[i] + ",");
+        }*/
+
+
+
+
+    //questão 09
+
+
+    /*Scanner ler = new Scanner(System.in);
+    int [] numeros = new int [100];
+
+    for (int i = 0; i < numeros.length; i++) {
+        if ( i  <= 1000 && i % 7 != 0 && i % 10 != 7){
+        numeros[i] = i;  
+        System.out.print(numeros[i] + ","); 
+        }
+        }*/
+
+
+
+        //questão 10
+
+        /*Scanner ler = new Scanner(System.in);
+        int [] x = new int [5];
+        int [] y = new int [5];
+        int [] soma = new int [5];
+        int [] produto = new int [5];
+        int [] diferenca = new int [5];
+        int [] intersecao = new int [5];
+        int [] uniao = new int [10];
+    for (int i = 0; i < x.length; i++) {
+        x[i] = ler.nextInt();  
+    } 
+    System.out.println();
+       for (int i = 0; i < y.length; i++) {
+        y[i] = ler.nextInt();
+       }
+
+
+
+         System.out.println("soma: ");
+       for (int i = 0; i < x.length; i++){
+       soma[i] = x[i] + y[i];
+       System.out.print(soma[i] + ","); 
+       }
+
+
+         System.out.println("\nproduto: ");
+         for (int i = 0; i < x.length; i++){
+          produto[i] = x[i] * y[i];
+          System.out.print(produto[i] + ","); 
+          }
+
+
+          System.out.println("\ndiferença: ");
+          for (int i = 0; i < x.length; i++){
+           diferenca[i] = x[i] - y[i];
+           System.out.print( diferenca[i] + ","); 
+           }
+
+           System.out.println("\ninterseção: ");
+              for (int i = 0; i < x.length; i++){
+                if (x[i] == y[i]){
+                intersecao[i] = y[i];
+                System.out.print( intersecao[i] + ","); 
+                }
+                }
+    
+                System.out.println("\nunião: ");
+                    for (int i = 0; i < uniao.length; i++){
+                 System.arraycopy(x, 0, uniao, 0, x.length);
+                    System.arraycopy(y, 0, uniao, x.length, y.length);
+                 System.out.print( uniao[i] + ","); 
+                    }*/
+
+
+    //questão 11
+
+    /*Scanner ler = new Scanner(System.in);
+    int [] v = new int [10];
+    double media = 0;
+    int somaQuadrados = 0;
+    double variancia = 0;
+    for (int i = 0; i < v.length; i++) {
+        v[i] = ler.nextInt();  
+    }
+    for (int i = 0; i < v.length; i++){
+        media = media + v[i];
+    }
+    media = media / v.length;
+
+    for (int i = 0; i < v.length; i++){
+        somaQuadrados += Math.pow(v[i] - media, 2);
+        }
+        variancia = somaQuadrados / (v.length - 1);
+        
+         double desvioPadrao = Math.sqrt(variancia);
+
+        System.out.println("Média: " + media);
+        System.out.println("Desvio padrão: " + desvioPadrao);*/
+
+
+
+
+        //questão 12
+
+
+        Scanner ler = new Scanner(System.in);
+        int [] v = new int [10];
+        for (int i = 0; i < v.length; i++) {
+            v[i] = ler.nextInt();  
+            if (v[i] == v[i] && v[i] != 0){
+                System.out.println("numeros repetido, escreva outro número: ");
+                i--;
+            }
+        }
 
     }
 }
