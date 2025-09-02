@@ -275,15 +275,207 @@ for (int i = nomes.length-1; i >= 0  ; i--){
         //questão 12
 
 
-        Scanner ler = new Scanner(System.in);
+        /*Scanner ler = new Scanner(System.in);
         int [] v = new int [10];
         for (int i = 0; i < v.length; i++) {
-            v[i] = ler.nextInt();  
-            if (v[i] == v[i] && v[i] != 0){
-                System.out.println("numeros repetido, escreva outro número: ");
+            System.out.println("Digite um número (" + (i + 1)  + ") : ");
+            int numero = ler.nextInt();
+            v[i] = numero;
+            for(int j = 0; j < i; j++){
+            if (v[j] == numero){
+                System.out.println("numero repetido, escreva outro número: ");
                 i--;
+                }
             }
         }
+        for(int i = 0; i < 10; i++){
+        System.out.print(v[i] + ",");
+        }*/
+
+
+
+        //questão 13
+
+        //---------------------------INCOMPLETA--------------------------------------!
+
+        
+        /*Scanner ler = new Scanner(System.in);
+        int [] v = new int [30];
+        int num = ler.nextInt();
+        v[0] = num;
+        for (int i = 0; i < num; i++){
+            System.out.println();
+            for(int j = 0; j < num; j++){
+                System.out.print(num);
+            }
+        }*/
+
+        //---------------------------------------------------------------------------!
+
+
+
+
+
+
+
+
+
+
+        // questão 14
+
+        /*Scanner ler = new Scanner(System.in);
+        int[][] m = new int[4][4];
+        int cont = 0;
+        for (int i = 0; i < 4; i++){
+            System.out.println();
+            for(int j = 0; j < 4; j++){
+                m[i][j] = ler.nextInt();
+                if (m[i][j] > 10){
+                    cont++;
+                }
+            }
+        }
+        System.out.println();
+
+        for (int i = 0; i < 4; i++){
+        for (int j = 0; j < 4; j++){
+        System.out.print(m[i][j] + ",");
+        }
+        System.out.println();
+        }
+
+        System.out.println("tem " + cont + " numeros maiores que 10.");*/
+
+
+
+        //questão 15
+
+
+        /*Scanner ler = new Scanner(System.in);
+        int[][] m = new int[5][5];
+        int um = 1;
+        int zero = 0;
+        for(int i = 0; i < 5; i++){
+            System.out.println();
+            for(int j = 0; j < 5; j++){
+                if(i == j){
+                    m[i][j] = um;
+                } else {
+                     m[i][j] = zero;
+                }
+            }
+        }
+        System.out.println();
+
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < 5; j++){
+                System.out.print(m[i][j] + ",");
+            }
+            System.out.println();
+        }*/
+
+
+        //questão 16
+
+        /*Scanner ler = new Scanner(System.in);
+        int[][] m = new int[4][4];
+
+        int produto = 0;
+        for (int i = 0; i < 4; i++){
+            System.out.println();
+            for(int j = 0; j < 4; j++){
+                produto = i * j;
+                m[i][j] = produto;
+            }
+        }
+        
+        for (int i = 0; i < 4; i++){
+        for (int j = 0; j < 4; j++){
+        System.out.print(m[i][j] + ",");
+        }
+        System.out.println();
+        }*/
+
+        
+        //questão 17
+
+
+        /*Scanner ler = new Scanner(System.in);
+        int[][] m = new int[4][4];
+        int linha = -1;
+        int coluna = -1;
+        int maior = 0;
+        int num = 0;
+        for (int i = 0; i < 4; i++){
+            System.out.println();
+            for(int j = 0; j < 4; j++){
+               num = ler.nextInt();
+               m[i][j] = num;
+               if  ( num > maior){
+                 maior = num;
+                 linha = i;
+                 coluna = j;
+               }
+            }
+        }
+        for (int i = 0; i < 4; i++){
+        for (int j = 0; j < 4; j++){
+        System.out.print(m[i][j] + ",");
+        }
+        System.out.println();
+        }
+        System.out.println("o maior numero colocado foi: " + maior);
+        System.out.println("localizado na linha " + linha + " e coluna " + coluna);*/
+
+
+
+        //questão 18
+
+
+        /*Scanner ler = new Scanner(System.in);
+        int[][] m = new int[4][4];
+        int linha = -1;
+        int coluna = -1;
+        int num = 0;
+        int valor;
+         System.out.println("digite o valor na matriz:");
+        valor = ler.nextInt();
+        System.out.println("digite a matriz:");
+        for (int i = 0; i < 4; i++){
+            System.out.println();
+            for(int j = 0; j < 4; j++){
+               num = ler.nextInt();
+               m[i][j] = num;  
+            }
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < 4; i++){
+            for(int j = 0; j < 4; j++){
+               if (m[i][j] == valor){ 
+                    linha = i;
+                    coluna = j;
+                } 
+            }
+        }
+        
+    
+        for (int i = 0; i < 4; i++){
+        for (int j = 0; j < 4; j++){
+        System.out.print(m[i][j] + ",");
+        }
+        System.out.println();
+        }
+        if(linha != -1){
+        System.out.println("\nO valor digitado está na posição " + linha + "," + coluna);
+        } else {
+            System.out.println("\nvalor não encontrado.");
+        }*/
+
+
+        //questão 19
+
 
     }
 }
