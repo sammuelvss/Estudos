@@ -476,6 +476,126 @@ for (int i = nomes.length-1; i >= 0  ; i--){
 
         //questão 19
 
+        /*Scanner ler = new Scanner(System.in);
+        
+        int [][] m = new int[10][10];
+        int a;
+        int b;
+        int c;
+
+        for(int i = 0; i < m.length; i++){
+            System.out.println();
+            for(int j = 0; j < m.length; j++){
+                m[i][j] = ler.nextInt();
+                if(i < j ){
+                    a = (((2 * i) + (7 * j))-2);
+                    m[i][j] = a;
+                } else if (i == j){
+                    b = ((3*(i*2)-1));
+                    m[i][j] = b;
+                } else if (i > j){
+                    c = (4*(i*i*i) - (5*(j*2)) + 1);
+                    m[i][j] = c;
+                } else {
+                    m[i][j] = ler.nextInt();
+                }
+            }
+        }
+        System.out.println();
+        for(int i = 0; i < m.length; i++){
+            System.out.println();
+            for(int j = 0; j < m.length; j++){
+                System.out.println(m[i][j] + ",");
+            }
+        } */
+
+
+        //questão 20;
+
+        /*Scanner ler = new Scanner(System.in);
+        
+        int [][] m = new int[3][3];
+        int somaDPC = 0;
+        int somaDPB = 0;
+        int somaDP = 0;
+        int somaDS = 0;
+        for (int i = 0; i < 3; i++){
+            System.out.println();
+         for (int j = 0; j < 3; j++){
+            m[i][j] = ler.nextInt();
+            if (i == j){
+                somaDP += m[i][j];
+            } if (i + j == 2){
+                somaDS += m[i][j];
+            } if (i > j){
+                somaDPB += m[i][j];
+            } if (j > i){
+                somaDPC += m[i][j];
+            }
+            }
+        }
+
+        for (int i = 0; i < 3; i++){
+            System.out.println();
+            for(int j = 0; j < 3; j ++){
+                System.out.print(m[i][j] + ",");
+            }
+        }
+        System.out.println("\nsoma diagonal principal: " + somaDP);
+        System.out.println("soma diagonal secundaria: " + somaDS);
+        System.out.println("soma diagonal principal cima: " + somaDPC);
+        System.out.println("soma diagonal principal baixo: " + somaDPB);
+    }
+}*/
+
+
+    //questão 21
+
+        /*Scanner ler = new Scanner(System.in);
+        
+        int [][] m = new int[4][4];
+        int zero = 0;
+        int numeros = 0;
+        for(int i = 0; i < 4; i++){
+            System.out.println();
+            for(int j = 0; j < 4; j++){
+                 numeros = ler.nextInt();
+                if (numeros >= 1 && numeros <= 20){
+                    m[i][j] = numeros;
+                } else {
+                    break;
+                }
+               
+            }
+        }
+
+        for(int i = 0; i < 4; i++){
+            System.out.println();
+            for(int j = 0; j < 4; j++){
+                 System.out.print(m[i][j] + ",");
+            }
+        }
+
+        System.out.println();
+
+       for(int i = 0; i < 4; i++){
+            System.out.println();
+            for(int j = 0; j < 4; j++){
+                 if (j > i){
+                    m[i][j] = zero;
+                }
+                 System.out.print(m[i][j] + ",");
+            }
+        }*/
+
+
+        //questão 22
+
+        Scanner ler = new Scanner(System.in);
+        
+        int [][] m = new int[4][4];
+
 
     }
 }
+
