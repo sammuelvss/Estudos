@@ -48,7 +48,7 @@ carros[5] = "BMW";
 carros[7] = "volkswagen";*/
 
 
-const agenda = [null,null,null];
+/*const agenda = [null,null,null];
 
 let nome = prompt("digite o nome:");
 let telefone = prompt("digite o telefone:");
@@ -86,7 +86,10 @@ if (adicionar == 1){
 }
 
 
-console.log(agenda);
+console.log(agenda);*/
+
+
+
 
 
 

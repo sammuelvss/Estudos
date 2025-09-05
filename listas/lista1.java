@@ -1,8 +1,8 @@
 package listas;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+//import java.util.ArrayList;
+//import java.util.List;
+//import java.util.Random;
 import java.util.Scanner;
 
 public class lista1 {
@@ -853,12 +853,39 @@ for (int i = nomes.length-1; i >= 0  ; i--){
         }*/
 
 
+        //questão 27
 
 
+        /*Scanner ler = new Scanner(System.in);
+        System.out.println("Digite o número de alunos na turma:");
+        int numeroAlunos = ler.nextInt();
+        ler.nextLine();
+        for (int i = 0; i < numeroAlunos; i++) {
+            
+            System.out.println("Digite o nome do aluno " + (i + 1) + ":");
+            String nomeAluno = ler.nextLine();
+            System.out.println("Digite a presença em 30 dias 'F' ou 'P':");
+            String presenca = ler.nextLine();
+            
+            int contFaltas = 0;
+            String diasFaltados = "";
+
+            for (int j = 0; j < presenca.length(); j++) {
+                if (presenca.charAt(j) == 'F') {
+                    contFaltas++;
+                    diasFaltados = diasFaltados + (j + 1) + ""; 
+                }
+            }
+            
+            if (contFaltas > 10) {
+                System.out.println("REPROVADO POR FALTA");
+                System.out.println("Nome: " + nomeAluno);
+                System.out.println("Dias que faltou: " + diasFaltados);
+            }
+        }
+        ler.close();
     }
-}
-
-
+}*/
 
 
 
