@@ -1,5 +1,8 @@
 package listas;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
 
 public class lista1 {
@@ -591,9 +594,140 @@ for (int i = nomes.length-1; i >= 0  ; i--){
 
         //questão 22
 
-        Scanner ler = new Scanner(System.in);
+        //Scanner ler = new Scanner(System.in);
         
-        int [][] m = new int[4][4];
+        /*int [][] m = new int[5][5];
+        List<Integer> numerosUsados = new ArrayList<>();
+       
+        for(int i = 0; i < 5; i++){
+            System.out.println();
+            for(int j = 0; j < 5; j++){
+                int numAleatorio;
+                do {
+                numAleatorio = (int) (Math.random() * 100);
+                } while (numerosUsados.contains(numAleatorio));
+                numerosUsados.add(numAleatorio);
+                m[i][j] = numAleatorio;
+               
+            }
+        }
+
+          for(int i = 0; i < 5; i++){
+            System.out.println();
+            for(int j = 0; j < 5; j++){
+                 System.out.print(m[i][j] + ",");
+            }
+        }*/
+
+
+        //questão 23
+
+        /*Scanner ler = new Scanner(System.in);
+        int [] v = new int[3];
+        int [][] m = new int[3][3];
+        int soma1 = 0;
+        int soma2 = 0;
+        int soma3 = 0;
+        for(int i = 0; i < 3; i++){
+            System.out.println();
+            for(int j = 0; j < 3; j++){
+                m[i][j] = ler.nextInt();
+                if (j == 0){
+                    soma1 += m[i][j];
+                   
+                } if (j == 1){
+                    soma2 += m[i][j];
+                  
+                } if (j == 2){
+                    soma3 += m[i][j];
+                
+                }
+
+            }
+        }
+        
+           for(int i = 0; i < 3; i++){
+            System.out.println();
+            for(int j = 0; j < 3; j++){
+                 System.out.print(m[i][j] + ",");
+            }
+        }
+
+        System.out.println();
+        System.out.println(soma1 + "," + soma2 + "," + soma3);
+         v[0] = soma1;
+         v[1] = soma2;
+         v[2] = soma3;
+         ler.close();
+        System.out.println("vetor: " + java.util.Arrays.toString(v));*/
+
+
+
+        //questão 24
+
+
+        /*Scanner ler = new Scanner(System.in);
+        int matricula = 0;
+        double mediaProvas = 0.0;
+        double mediaTrabalhos = 0.0;
+        double notaFinal = 0.0;
+        double maiornota = -1.0;
+        double melhoraluno = -1.0;
+        double somaGeral = 0.0;
+        double mediaGeral = 0.0;
+        double [][] m = new double[5][4];
+        for (int i = 0; i < 5; i++){
+            System.out.println();
+                System.out.println("digite a matricula:");
+                matricula = ler.nextInt();
+                System.out.println("digite a media das provas:");
+                mediaProvas = ler.nextDouble();
+                System.out.println("digite a media dos trabalhos:");
+                mediaTrabalhos = ler.nextDouble();
+                notaFinal = mediaProvas + mediaTrabalhos;
+                    m[i][0] = matricula;
+                    m[i][1] = mediaProvas;
+                    m[i][2] = mediaTrabalhos;
+                    m[i][3] = notaFinal;
+                    somaGeral += notaFinal;
+                if (notaFinal > maiornota) {
+                maiornota = notaFinal;
+                melhoraluno = matricula;
+            }
+        }
+        mediaGeral = somaGeral/5;
+        System.out.println();
+        System.out.println("MATRÍCULA   |   MÉDIA PROVAS   |   MÉDIA TRABALHOS   |  NOTA FINAL");
+
+         for(int i = 0; i < 5; i++){
+            System.out.println();
+            for(int j = 0; j < 4; j++){
+                 System.out.print("|  " + m[i][j] + "  |   |   ");
+            }
+        }
+
+
+    System.out.println("");
+      System.out.println("MAIOR NOTA:" + maiornota + ", MATRICULA: " + melhoraluno);
+
+        System.out.println("media geral dos alunos: " +  mediaGeral);*/
+
+
+
+        //questão 25
+
+        
+
+
+
+
+
+
+
+
+
+
+
 
 
     }
