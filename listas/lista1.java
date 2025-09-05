@@ -299,30 +299,38 @@ for (int i = nomes.length-1; i >= 0  ; i--){
 
         //questão 13
 
-        //---------------------------INCOMPLETA--------------------------------------!
-
         
         /*Scanner ler = new Scanner(System.in);
-        int [] v = new int [30];
-        int num = ler.nextInt();
-        v[0] = num;
-        for (int i = 0; i < num; i++){
-            System.out.println();
-            for(int j = 0; j < num; j++){
-                System.out.print(num);
+        int n = ler.nextInt();
+
+        if (n <= 0){
+            System.out.println("numero não é positivo!");
+            return;
+        }
+
+        int [][] v = new int [n][n];
+        
+        for (int i = 0; i < n; i++) {
+            v[i][0] = 1;
+            for (int j = 1; j <= i; j++) {
+                if (j == i) {
+                    v[i][j] = 1;
+                } else {
+                    v[i][j] = v[i - 1][j - 1] + v[i - 1][j];
+                }
             }
+        }
+        for (int i = 0; i < n; i++) {
+        for (int k = 0; k < n - i - 1; k++) {    
+        }
+            
+        for (int j = 0; j <= i; j++) {
+             System.out.print(v[i][j] + " ");
+        }
+        System.out.println();
         }*/
-
-        //---------------------------------------------------------------------------!
-
-
-
-
-
-
-
-
-
+       
+//-----------------------------------------------------------------------------------------
 
         // questão 14
 
@@ -716,20 +724,145 @@ for (int i = nomes.length-1; i >= 0  ; i--){
 
         //questão 25
 
+        /*Scanner ler = new Scanner(System.in);
+        int [][] m1 = new int[2][2];
+        int [][] m2 = new int[2][2];
+        int [][] mEscolha = new int [2][2];
+
+        System.out.println("MATRIZ 1");
+        for(int i = 0; i < 2; i++){
+            System.out.println();
+            for(int j = 0; j < 2; j++){
+                m1[i][j] = ler.nextInt();
+            }
+        }
+        System.out.println("MATRIZ 2");
+        for(int i = 0; i < 2; i++){
+            System.out.println();
+            for(int j = 0; j < 2; j++){
+                m2[i][j] = ler.nextInt();
+            }
+        }
+        ler.nextLine();
+
+        System.out.println("Escolha uma operação:");
+        System.out.println(" (a) Somar as duas matrizes");
+        System.out.println(" (b) Subtrair as duas matrizes");
+        System.out.println(" (c) Adicionar uma constante as duas matrizes");
+        System.out.println(" (d) Imprimir as matrizes");
+        System.out.print("Sua opção: ");
+        String letra = ler.nextLine();
         
+         System.out.println();
+            if (letra.equals("a")) {
+            System.out.println("RESULTADO DA SOMA:");
+            for (int i = 0; i < 2; i++) {
+                for (int j = 0; j < 2; j++) {
+                    mEscolha[i][j] = m1[i][j] + m2[i][j];
+                }
+            }
+            imprimirMatriz(mEscolha);
+                    
+                } else if (letra.equals("b")) {
+            System.out.println("RESULTADO DA SUBTRAÇÃO:");
+            for (int i = 0; i < 2; i++) {
+                for (int j = 0; j < 2; j++) {
+                    mEscolha[i][j] = m1[i][j] - m2[i][j];
+                }
+            }
+            imprimirMatriz(mEscolha);
+            
+        } else if (letra.equals("c")) {
+            System.out.print("Digite a constante a ser adicionada: ");
+            int constante = ler.nextInt();
+            
+            System.out.println("RESULTADO DA ADIÇÃO DE CONSTANTE:");
+            for (int i = 0; i < 2; i++) {
+                for (int j = 0; j < 2; j++) {
+                    mEscolha[i][j] = ((m1[i][j] + constante) + (m2[i][j] + constante));
+                }
+            }
+            imprimirMatriz(mEscolha);
+            
+        } else if (letra.equals("d")) {
+            System.out.println("MATRIZ 1 ORIGINAL:");
+            imprimirMatriz(m1);
+            System.out.println("MATRIZ 2 ORIGINAL:");
+            imprimirMatriz(m2);
+            
+        } else {
+            System.out.println("Opção inválida!");
+        }
+                
+    }
+
+
+        public static void imprimirMatriz(int[][] matriz) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+                System.out.print(matriz[i][j] + ",");
+            }
+            System.out.println();
+            }
+        }
+    }*/
 
 
 
+        //questão 26
 
+        /*Scanner scanner = new Scanner(System.in);
+        int[][] m = new int[10][10];
+  
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                m[i][j] = -1;
+            }
+        }
 
+        System.out.println("Digite o número de tentativas de compras (N):");
+        int numCompras = scanner.nextInt();
 
+        for (int i = 0; i < numCompras; i++) {
+            System.out.println("Compra " + (i + 1));
+            System.out.print("Digite o número da fileira (0-9): ");
+            int fileira = scanner.nextInt();
+            System.out.print("Digite o número da poltrona (0-9): ");
+            int poltrona = scanner.nextInt();
 
-
-
+            if (fileira >= 0 && fileira < 10 && poltrona >= 0 && poltrona < 10) {        
+                if (m[fileira][poltrona] == -1) {
+                    m[fileira][poltrona] = 1;
+                    System.out.println("Ingresso vendido com sucesso!");
+                } else {
+                    System.out.println("Poltrona já foi vendida.");
+                }
+            } else {
+                System.out.println("Fileira ou poltrona inválida. Tente novamente.");
+            }
+        }
+    
+        System.out.println();
+    
+        System.out.println("--- Status Final das Poltronas ---");
+        for (int i = 0; i < 10; i++) {
+            System.out.println();
+            for (int j = 0; j < 10; j++) {
+                System.out.print(m[i][j] + " ");
+            }
+        }*/
 
 
 
 
     }
 }
+
+
+
+
+
+
+    
+
 
