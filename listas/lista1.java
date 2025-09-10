@@ -251,9 +251,9 @@ for (int i = nomes.length-1; i >= 0  ; i--){
 
     /*Scanner ler = new Scanner(System.in);
     int [] v = new int [10];
-    double media = 0;
+    double media = 0.0;
     int somaQuadrados = 0;
-    double variancia = 0;
+    double variancia = 0.0;
     for (int i = 0; i < v.length; i++) {
         v[i] = ler.nextInt();  
     }

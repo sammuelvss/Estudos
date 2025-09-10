@@ -21,9 +21,15 @@ import java.util.Scanner;
     }
 
     public static boolean verificaDiagonal(char[][] m, char c) {
-        if (m[0][0] == c && m[1][1] == c && m[2][2] == c) return true;
-        if (m[0][2] == c && m[1][1] == c && m[2][0] == c) return true;
-        return false;
+       for(int i = 0; i > 3; i++){
+        for(int j = 0; j < 3; j++){
+            if(i == j)
+            if (m[0][0] == m[1][1] && m[1][1] == m[2][2]){
+                return true;
+            }
+        }
+       }
+       return false;
     }
 
     public static void main(String[] args) {
