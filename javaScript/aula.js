@@ -50,18 +50,18 @@ carros[7] = "volkswagen";*/
 function adicionar(pessoa){
 switch (pessoa){
 case 1:
-const agenda  = [null,null,null];
+const agenda  = [];
 
 let nome = prompt("digite o nome:");
 let telefone = prompt("digite o telefone:");
 let matricula = prompt("digite sua matricula");
 
-agenda[0] = nome;
-agenda[1] = telefone;
-agenda[2] = matricula;
+agenda.push(nome);
+agenda.push(telefone);
+agenda.push(matricula);
 
 
-let remover = prompt("você deseja remover? digite 1 para nome, 2 para telefone, 3 para matricula.");
+let remover = prompt("você deseja remover? digite 1 para nome, 2 para telefone, 3 para matricula. 0 para parar");
 if (remover == 1){
     agenda.splice(0,1);
     console.log(agenda);
@@ -77,14 +77,14 @@ if (remover == 1){
 
 let adicionar = prompt("você deseja adicionar um dado? digite 1 para nome, 2 para telefone, 3 para matricula.");
 if (adicionar == 1){
-     nome2 = prompt("digite o nome:")
-    agenda.splice(0,0, nome2);
+     nome = prompt("digite o nome:")
+    agenda.splice(0,0, nome);
 } else if (adicionar == 2){
-    telefone2 = prompt("digite seu telefone:");
-    agenda.splice(1,0, telefone2);
+    telefone = prompt("digite seu telefone:");
+    agenda.splice(1,0, telefone);
 } else if (adicionar == 3){
-    matricula2 = prompt("digite sua matricula:");
-    agenda.splice(2,0, matricula2);
+    matricula = prompt("digite sua matricula:");
+    agenda.splice(2,0, matricula);
 } else {
     alert("numero invalido.");
 }
@@ -93,9 +93,7 @@ console.log(agenda);
     }
 }
 
-
-
-
+adicionar(1);
 
 
 
