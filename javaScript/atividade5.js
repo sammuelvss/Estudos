@@ -756,7 +756,105 @@ JavaScript
 }
 
 
+//questão 39
+{
+    let valorDivida = parseFloat(prompt("Questão 39: Digite o valor da dívida:"));
 
+    if (isNaN(valorDivida) || valorDivida <= 0) {
+        console.log("Valor inválido. Por favor, inicie novamente e digite um número positivo.");
+    } else {
+        console.log("Valor da Dívida | Valor Juros | Qtd Parcelas | Valor da Parcela");
+
+        const parcelas = [1, 3, 6, 9, 12];
+        const jurosTaxas = [0, 0.10, 0.15, 0.20, 0.25];
+
+        for (let i = 0; i < parcelas.length; i++) {
+            let qtdParcelas = parcelas[i];
+            let taxaJuros = jurosTaxas[i];
+            
+            let valorJuros = valorDivida * taxaJuros;
+            let dividaTotal = valorDivida + valorJuros;
+            let valorParcela = dividaTotal / qtdParcelas;
+            
+            let linha = "R$ " + dividaTotal.toFixed(2) 
+                      + " | R$ " + valorJuros.toFixed(2) 
+                      + " | " + qtdParcelas 
+                      + " | R$ " + valorParcela.toFixed(2);
+            console.log(linha);
+        }
+    }
+}
+
+//questão 40
+{
+    let totalGeral = 0;
+    
+    console.log("--- Cardápio da Lanchonete ---");
+    console.log("Especificação   | Código | Preço");
+    console.log("Cachorro Quente | 100    | R$ 1,20");
+    console.log("Bauru Simples   | 101    | R$ 1,30");
+    console.log("Bauru com ovo   | 102    | R$ 1,50");
+    console.log("Hambúrguer      | 103    | R$ 1,20");
+    console.log("Cheeseburguer   | 104    | R$ 1,30");
+    console.log("Refrigerante    | 105    | R$ 1,00");
+    console.log("--------------------------------");
+
+    while (true) {
+        let codigo = parseInt(prompt("Digite o código do item (ou 0 para encerrar o pedido):"));
+
+        if (codigo === 0) {
+            break;
+        }
+
+        let quantidade = parseInt(prompt("Digite a quantidade desejada:"));
+        
+        if (isNaN(quantidade) || quantidade <= 0) {
+            alert("Quantidade inválida. Tente adicionar o item novamente.");
+            continue; // Pula para a próxima iteração do laço
+        }
+
+        let preco = 0;
+        let especificacao = "";
+
+        switch (codigo) {
+            case 100:
+                preco = 1.20;
+                especificacao = "Cachorro Quente";
+                break;
+            case 101:
+                preco = 1.30;
+                especificacao = "Bauru Simples";
+                break;
+            case 102:
+                preco = 1.50;
+                especificacao = "Bauru com ovo";
+                break;
+            case 103:
+                preco = 1.20;
+                especificacao = "Hambúrguer";
+                break;
+            case 104:
+                preco = 1.30;
+                especificacao = "Cheeseburguer";
+                break;
+            case 105:
+                preco = 1.00;
+                especificacao = "Refrigerante";
+                break;
+            default:
+                alert("Código de item inválido!");
+                continue; // Pula para a próxima iteração
+        }
+        
+        let valorItem = preco * quantidade;
+        totalGeral += valorItem;
+        
+        console.log("Item: " + especificacao + " | Qtd: " + quantidade + " | Valor: R$ " + valorItem.toFixed(2));
+    }
+    
+    console.log("--------------------------------");
+    console.log("Valor total a pagar: R$ " + totalGeral.toFixed(2));
+}
 
 
 
