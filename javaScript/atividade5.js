@@ -1,7 +1,7 @@
 
 
 //questão 1
-{
+/*{
     let nota;
     do {
         nota = parseFloat(prompt(" Digite uma nota entre zero e dez:"));
@@ -854,7 +854,7 @@ JavaScript
     
     console.log("--------------------------------");
     console.log("Valor total a pagar: R$ " + totalGeral.toFixed(2));
-}
+}*/
 
 
 
