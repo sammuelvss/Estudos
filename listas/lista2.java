@@ -105,10 +105,10 @@ public class lista2 {
                 maisvotado = contagem[i];
                 indice = i;
             }       
-            if(contagem[i] == maisvotado){
+            /*if(contagem[i] == maisvotado){
                 empatados++;
                 indices += i + " ";
-            }
+            }*/
         }    
             return indice;      
         }
