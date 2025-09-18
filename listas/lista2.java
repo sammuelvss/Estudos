@@ -127,7 +127,7 @@ public class lista2 {
 
 // questão 3 ------------------------------------------------------------------------
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
     
     double [] temps = {30.5,32.0,29.0,28.5,31.0,27.5,33.0};
         System.out.println(media(temps));
@@ -171,7 +171,157 @@ public class lista2 {
         
         return menorTemperatura;
     }
-}
+}*/
 
 // questão 4 ------------------------------------------------------------------------
 
+    /*public static void main(String[] args) {
+        
+        double [] notas = new double [5];
+        Scanner ler = new Scanner(System.in);
+        for(int i = 0; i < notas.length; i++){
+            System.out.println("Digite a nota ");
+            notas[i] = ler.nextDouble();
+        }
+        System.out.println("digite o limite:");
+        double limite = ler.nextDouble();
+        System.out.println("Notas acima do limite: " +contarNotasAcima(notas, limite));
+
+
+    }
+
+
+    public static int contarNotasAcima(double[] notas, double limite){
+      
+        int cont = 0;
+        for(int i = 0; i < notas.length; i++){
+            if(notas[i] > limite){
+                cont++;
+            }
+        }
+        return cont;
+
+
+    }
+}*/
+
+
+// questão 5 ------------------------------------------------------------------------
+
+
+    /*public static void main(String[] args) {
+        
+
+        Scanner ler = new Scanner(System.in);
+        int[] avaliacoes = new int[10];
+        for(int i = 0; i < avaliacoes.length; i++){
+            System.out.println("DIGITE A SUA AVALIAÇÃO DE 1 A 5:");
+            int ava = ler.nextInt();
+            if(ava >= 1 && ava <= 5){
+                avaliacoes[i] = ava;
+            }
+        } 
+        int[] frequencias = frequencia(avaliacoes);
+        System.out.println("Frequência: " + Arrays.toString(frequencias));
+        System.out.println("Média: " + satisfacaoMedia(avaliacoes));
+        ler.close();
+     }
+
+     public static int[] frequencia(int[] avaliacoes){
+        int cont1 = 0;
+        int cont2 = 0;
+        int cont3 = 0;
+        int cont4 = 0;
+        int cont5 = 0;
+        int [] fre = new int[5];
+        for(int i = 0; i < avaliacoes.length; i++){
+
+            if(avaliacoes[i] == 1){
+                cont1++;
+                fre[0] = cont1;
+            } if(avaliacoes[i] == 2){
+                cont2++;
+                fre[1] = cont2;
+            } if(avaliacoes[i] == 3){
+                cont3++;
+                fre[2] = cont3;
+            } if(avaliacoes[i] == 4){
+                cont4++;
+                fre[3] = cont4;
+            } if(avaliacoes[i] == 5){
+                cont5++;
+                fre[4] = cont5;
+            }
+
+        }
+          return fre;
+     }
+
+     public static double satisfacaoMedia (int [] avaliacoes){
+
+        double soma = 0.0;
+        double media = 0.0;
+        for(int i = 0; i < avaliacoes.length; i++){
+            soma += avaliacoes[i];
+        }
+        media = soma / avaliacoes.length;
+        return media;
+     }
+}*/   
+
+// questão 6 ------------------------------------------------------------------------
+
+
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+       
+        
+
+
+        char[][] tabuleiro = new char[3][3];
+        for(int i = 0; i < 3; i++){
+            System.out.println();
+            for(int j = 0; j < 3; j++){
+            tabuleiro[i][j] = ler.next().charAt(0);
+            }
+        }
+
+    for(int i = 0; i < 3; i++){
+        System.out.println();
+        for(int j = 0; j < 3; j++){
+            System.out.print(tabuleiro[i][j] + "");
+        }
+    }
+    System.out.println();
+
+    char jogador = 'x';
+    System.out.println(venceu(tabuleiro, jogador) + " xjogador " + jogador + " venceu!");
+    ler.close();
+    }
+
+    public static boolean venceu(char[][] tabuleiro, char jogador){
+
+        boolean vencedor = false;
+        for(int i = 0; i < 3; i++){
+            System.out.println();
+            for(int j = 0; j < 3; j++){
+                //linha
+                if(tabuleiro[i][0] == jogador && tabuleiro[i][1] == jogador && tabuleiro[i][2] == jogador){
+                    vencedor = true;
+                //diag principal
+                } if(tabuleiro[0][0] == jogador && tabuleiro[1][1] == jogador && tabuleiro[2][2] == jogador){
+                    vencedor = true; 
+                //coluna
+                } if(tabuleiro[0][j] == jogador && tabuleiro[1][j] == jogador && tabuleiro[2][j] == jogador){
+                    vencedor = true;
+                //diag secundaria
+                } if(tabuleiro[0][2] == jogador && tabuleiro[1][1] == jogador && tabuleiro[2][0] == jogador){
+                    vencedor = true;
+                }
+            }
+        }
+
+        return vencedor;
+
+    }
+}
