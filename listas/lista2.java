@@ -12,7 +12,7 @@ public class lista2 {
      * Scanner ler = new Scanner(System.in);
      * double[] precos = new double[10];
      * for (int i = 0; i < precos.length; i++) {
-     * System.out.println("Digite o preço do produto " + i + ":");
+     * System.out.println("Digite o preço do tri " + i + ":");
      * double valor = ler.nextDouble();
      * precos[i] = valor;
      * }
@@ -329,33 +329,102 @@ public class lista2 {
 // questão 7 ------------------------------------------------------------------------
 
 
+    /*public static void main(String[] args) {
+        
+        double[][] vendas = new double[3][4];
+        Scanner ler = new Scanner(System.in);
+        for(int i = 0; i < 3; i++){
+            System.out.println();
+            for( int j = 0; j < 4; j++){
+                vendas[i][j] = ler.nextDouble();
+            }
+        }
+        double[] resultado1 = totalPorProduto(vendas);
+        System.out.println("totalPorProduto: " + Arrays.toString(resultado1));
+        double[] resultado2 = totalPorTrimestre(vendas);
+        System.out.println("totalPorTrimestre: " + Arrays.toString(resultado2));
+
+        }
+
+        public static double[] totalPorProduto(double[][] vendas){
+
+            double produto1 = 0.0;
+            double produto2 = 0.0;
+            double produto3 = 0.0;
+            double[] valortotal = new double[3];
+            
+                for(int j = 0; j < 4; j++){
+                    produto1 += vendas[0][j];
+                    valortotal[0] = produto1;
+                    produto2 += vendas[1][j];
+                    valortotal[1] = produto2;
+                    produto3 += vendas[2][j];
+                    valortotal[2] = produto3;                     
+                }   
+
+            return valortotal;
+        }
+
+        public static double[] totalPorTrimestre(double[][] vendas){
+
+            double tri1 = 0;
+            double tri2 = 0;
+            double tri3 = 0;
+            double tri4 = 0;
+            double[] valorPorTri = new double[4];
+
+            for(int i = 0; i < 3; i++){  
+                tri1 += vendas[i][0];
+                    valorPorTri[0] = tri1;
+                tri2 += vendas[i][1];
+                    valorPorTri[1] = tri2;
+                tri3 += vendas[i][2];
+                    valorPorTri[2] = tri3;   
+                tri4 += vendas[i][3];
+                    valorPorTri[3] = tri4;  
+            }
+
+            return valorPorTri;
+
+        }
+    }*/
+
+
+    // questão 8 ------------------------------------------------------------------------
+
     public static void main(String[] args) {
         
-        double[][] vendas = {{100.0,120.0,130.0,140.0},{80.0,90.0,100.0,110.0},{200.0,210.0,220.0,230.0}};
-        double[] resultado1 = totalDeProdutos(vendas);
-        System.out.println("totalPorProduto: " + Arrays.toString(resultado1));
+        int[][] mapa = new int[5][5];
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite os valores do mapa:");
+        for(int i = 0; i < 3; i++){
+            System.out.println();
+            for(int j = 0; j < 3;  j++){
+                mapa[i][j] = ler.nextInt();
+             }           
+        }
+        System.out.println(pontoMaisAlto(mapa));
 
         }
 
-        public static double[] totalDeProdutos(double[][] vendas){
+        public static int pontoMaisAlto(int[][] mapa){
 
-            double produto1 = 0;
-            double produto2 = 0;
-            double produto3 = 0;
-            double[] valorTotal = new double[3];
-            
-            for(int i = 0; i < 3; i++){
-                for(int j = 0; j < 4; j++){
+            int maisAlto = 0;
 
-                    produto1 += vendas[0][j];
-                    valorTotal[0] = produto1;
-                    produto2 += vendas[1][j];
-                    valorTotal[1] = produto2;
-                    produto3 += vendas[2][j];
-                    valorTotal[2] = produto3;
-                                               
-                }
-            }
-            return valorTotal;
+            for(int i = 0; i < 5; i++){
+                System.out.println();
+                for(int j = 0; j < 5;  j++){
+                    
+                    if(mapa[i][j] > maisAlto){
+                        maisAlto = mapa[i][j];
+                     }
+                }           
+             }
+            return maisAlto;
         }
+
+
+
+
+        
     }
