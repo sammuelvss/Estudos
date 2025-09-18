@@ -272,7 +272,7 @@ public class lista2 {
 // questão 6 ------------------------------------------------------------------------
 
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
        
         
@@ -295,7 +295,7 @@ public class lista2 {
     System.out.println();
 
     char jogador = 'x';
-    System.out.println(venceu(tabuleiro, jogador) + " xjogador " + jogador + " venceu!");
+    System.out.println(venceu(tabuleiro, jogador) + " jogador " + jogador + " venceu!");
     ler.close();
     }
 
@@ -308,12 +308,12 @@ public class lista2 {
                 //linha
                 if(tabuleiro[i][0] == jogador && tabuleiro[i][1] == jogador && tabuleiro[i][2] == jogador){
                     vencedor = true;
+                    //coluna
+                } if(tabuleiro[0][j] == jogador && tabuleiro[1][j] == jogador && tabuleiro[2][j] == jogador){
+                    vencedor = true;
                 //diag principal
                 } if(tabuleiro[0][0] == jogador && tabuleiro[1][1] == jogador && tabuleiro[2][2] == jogador){
                     vencedor = true; 
-                //coluna
-                } if(tabuleiro[0][j] == jogador && tabuleiro[1][j] == jogador && tabuleiro[2][j] == jogador){
-                    vencedor = true;
                 //diag secundaria
                 } if(tabuleiro[0][2] == jogador && tabuleiro[1][1] == jogador && tabuleiro[2][0] == jogador){
                     vencedor = true;
@@ -324,4 +324,38 @@ public class lista2 {
         return vencedor;
 
     }
-}
+}*/
+
+// questão 7 ------------------------------------------------------------------------
+
+
+    public static void main(String[] args) {
+        
+        double[][] vendas = {{100.0,120.0,130.0,140.0},{80.0,90.0,100.0,110.0},{200.0,210.0,220.0,230.0}};
+        double[] resultado1 = totalDeProdutos(vendas);
+        System.out.println("totalPorProduto: " + Arrays.toString(resultado1));
+
+        }
+
+        public static double[] totalDeProdutos(double[][] vendas){
+
+            double produto1 = 0;
+            double produto2 = 0;
+            double produto3 = 0;
+            double[] valorTotal = new double[3];
+            
+            for(int i = 0; i < 3; i++){
+                for(int j = 0; j < 4; j++){
+
+                    produto1 += vendas[0][j];
+                    valorTotal[0] = produto1;
+                    produto2 += vendas[1][j];
+                    valorTotal[1] = produto2;
+                    produto3 += vendas[2][j];
+                    valorTotal[2] = produto3;
+                                               
+                }
+            }
+            return valorTotal;
+        }
+    }
