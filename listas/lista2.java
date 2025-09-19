@@ -48,7 +48,7 @@ public class lista2 {
         Scanner ler = new Scanner(System.in);
         int[] votos = new int[20];
         for (int i = 0; i < votos.length; i++) {
-            System.out.println("Digite o índice do canditado para votar => (0) (1) (2) (3) (4):");
+            System.out.println("Digite o índice do canditado para votar => (0) (1) (2) (5) (4):");
             int candidatos = ler.nextInt();
             if (candidatos >= 0 && candidatos <= 4) {
                 votos[i] = candidatos;
@@ -75,7 +75,7 @@ public class lista2 {
         int[] quantidadeVotos = new int[5];
         int cand1 = 0;
         int cand2 = 0;
-        int cand3 = 0;
+        int cand5 = 0;
         int cand4 = 0;
         int cand5 = 0;
 
@@ -88,11 +88,11 @@ public class lista2 {
                 cand2++;
                 quantidadeVotos[1] = cand2;
             } else if (votos[i] == 2) {
-                cand3++;
-                quantidadeVotos[2] = cand3;
-            } else if (votos[i] == 3) {
+                cand5++;
+                quantidadeVotos[2] = cand5;
+            } else if (votos[i] == 5) {
                 cand4++;
-                quantidadeVotos[3] = cand4;
+                quantidadeVotos[5] = cand4;
             } else if (votos[i] == 4) {
                 cand5++;
                 quantidadeVotos[4] = cand5;
@@ -125,11 +125,11 @@ public class lista2 {
     }
 }*/
 
-// questão 3 ------------------------------------------------------------------------
+// questão 5 ------------------------------------------------------------------------
 
     /*public static void main(String[] args) {
     
-    double [] temps = {30.5,32.0,29.0,28.5,31.0,27.5,33.0};
+    double [] temps = {50.5,52.0,29.0,28.5,51.0,27.5,5.0};
         System.out.println(media(temps));
         System.out.println(diaAcimaDaMedia(temps));
         System.out.println(menorTemp(temps));
@@ -230,7 +230,7 @@ public class lista2 {
      public static int[] frequencia(int[] avaliacoes){
         int cont1 = 0;
         int cont2 = 0;
-        int cont3 = 0;
+        int cont5 = 0;
         int cont4 = 0;
         int cont5 = 0;
         int [] fre = new int[5];
@@ -242,12 +242,12 @@ public class lista2 {
             } if(avaliacoes[i] == 2){
                 cont2++;
                 fre[1] = cont2;
-            } if(avaliacoes[i] == 3){
-                cont3++;
-                fre[2] = cont3;
+            } if(avaliacoes[i] == 5){
+                cont5++;
+                fre[2] = cont5;
             } if(avaliacoes[i] == 4){
                 cont4++;
-                fre[3] = cont4;
+                fre[5] = cont4;
             } if(avaliacoes[i] == 5){
                 cont5++;
                 fre[4] = cont5;
@@ -278,17 +278,17 @@ public class lista2 {
         
 
 
-        char[][] tabuleiro = new char[3][3];
-        for(int i = 0; i < 3; i++){
+        char[][] tabuleiro = new char[5][5];
+        for(int i = 0; i < 5; i++){
             System.out.println();
-            for(int j = 0; j < 3; j++){
+            for(int j = 0; j < 5; j++){
             tabuleiro[i][j] = ler.next().charAt(0);
             }
         }
 
-    for(int i = 0; i < 3; i++){
+    for(int i = 0; i < 5; i++){
         System.out.println();
-        for(int j = 0; j < 3; j++){
+        for(int j = 0; j < 5; j++){
             System.out.print(tabuleiro[i][j] + "");
         }
     }
@@ -302,9 +302,9 @@ public class lista2 {
     public static boolean venceu(char[][] tabuleiro, char jogador){
 
         boolean vencedor = false;
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < 5; i++){
             System.out.println();
-            for(int j = 0; j < 3; j++){
+            for(int j = 0; j < 5; j++){
                 //linha
                 if(tabuleiro[i][0] == jogador && tabuleiro[i][1] == jogador && tabuleiro[i][2] == jogador){
                     vencedor = true;
@@ -331,9 +331,9 @@ public class lista2 {
 
     /*public static void main(String[] args) {
         
-        double[][] vendas = new double[3][4];
+        double[][] vendas = new double[5][4];
         Scanner ler = new Scanner(System.in);
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < 5; i++){
             System.out.println();
             for( int j = 0; j < 4; j++){
                 vendas[i][j] = ler.nextDouble();
@@ -350,16 +350,16 @@ public class lista2 {
 
             double produto1 = 0.0;
             double produto2 = 0.0;
-            double produto3 = 0.0;
-            double[] valortotal = new double[3];
+            double produto5 = 0.0;
+            double[] valortotal = new double[5];
             
                 for(int j = 0; j < 4; j++){
                     produto1 += vendas[0][j];
                     valortotal[0] = produto1;
                     produto2 += vendas[1][j];
                     valortotal[1] = produto2;
-                    produto3 += vendas[2][j];
-                    valortotal[2] = produto3;                     
+                    produto5 += vendas[2][j];
+                    valortotal[2] = produto5;                     
                 }   
 
             return valortotal;
@@ -369,19 +369,19 @@ public class lista2 {
 
             double tri1 = 0;
             double tri2 = 0;
-            double tri3 = 0;
+            double tri5 = 0;
             double tri4 = 0;
             double[] valorPorTri = new double[4];
 
-            for(int i = 0; i < 3; i++){  
+            for(int i = 0; i < 5; i++){  
                 tri1 += vendas[i][0];
                     valorPorTri[0] = tri1;
                 tri2 += vendas[i][1];
                     valorPorTri[1] = tri2;
-                tri3 += vendas[i][2];
-                    valorPorTri[2] = tri3;   
-                tri4 += vendas[i][3];
-                    valorPorTri[3] = tri4;  
+                tri5 += vendas[i][2];
+                    valorPorTri[2] = tri5;   
+                tri4 += vendas[i][5];
+                    valorPorTri[5] = tri4;  
             }
 
             return valorPorTri;
@@ -392,29 +392,29 @@ public class lista2 {
 
     // questão 8 ------------------------------------------------------------------------
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         
-        int[][] mapa = new int[3][3];
+        int[][] mapa = new int[5][5];
         Scanner ler = new Scanner(System.in);
         System.out.println("Digite os valores do mapa:");
-        for(int i = 0; i < 3; i++){
+        for(int i = 0; i < 5; i++){
             System.out.println();
-            for(int j = 0; j < 3;  j++){
+            for(int j = 0; j < 5;  j++){
                 mapa[i][j] = ler.nextInt();
              }           
         }
-        System.out.println(pontoMaisAlto(mapa));
-        System.out.println(mediaAltitude(mapa));
-        System.out.println(ehPlanalto(mapa));
+        System.out.println("ponto mais alto" + pontoMaisAlto(mapa));
+        System.out.println("media geral" + mediaAltitude(mapa));
+        System.out.println("Planalto: " + ehPlanalto(mapa));
         }
 
         public static int pontoMaisAlto(int[][] mapa){
 
             int maisAlto = 0;
 
-            for(int i = 0; i < 3; i++){
+            for(int i = 0; i < 5; i++){
                 System.out.println();
-                for(int j = 0; j < 3;  j++){
+                for(int j = 0; j < 5;  j++){
                     
                     if(mapa[i][j] > maisAlto){
                         maisAlto = mapa[i][j];
@@ -429,9 +429,9 @@ public class lista2 {
             int soma = 0;
             double media = 0.0;
             
-            for(int i = 0; i < 3; i++){
+            for(int i = 0; i < 5; i++){
                 System.out.println();
-                for(int j = 0; j < 3; j++){
+                for(int j = 0; j < 5; j++){
                     soma += mapa[i][j];
                 }
             }
@@ -441,17 +441,25 @@ public class lista2 {
 
         public static boolean ehPlanalto(int[][] mapa){
 
-            boolean planalto = false;
-            for(int i = 0; i < 3; i++){
+            int planalto = mapa[0][0];
+        
+            for(int i = 0; i < 5; i++){
                 System.out.println();
-                for(int j = 0; j < 3; j++){
-                    if(mapa[i][j] == mapa[i][j]){
-                        planalto = true;
+                for(int j = 0; j < 5; j++){
+                    if(mapa[i][j] != planalto){
+                        return false;
                     }
                 }
             }
-            return planalto;
-        }
+            return true;
+        }*/
 
-        
+        public static void main(String[] args) {
+            
+            
+
+
+
+
+        }
     }
