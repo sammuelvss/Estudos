@@ -394,7 +394,7 @@ public class lista2 {
 
     public static void main(String[] args) {
         
-        int[][] mapa = new int[5][5];
+        int[][] mapa = new int[3][3];
         Scanner ler = new Scanner(System.in);
         System.out.println("Digite os valores do mapa:");
         for(int i = 0; i < 3; i++){
@@ -404,16 +404,17 @@ public class lista2 {
              }           
         }
         System.out.println(pontoMaisAlto(mapa));
-
+        System.out.println(mediaAltitude(mapa));
+        System.out.println(ehPlanalto(mapa));
         }
 
         public static int pontoMaisAlto(int[][] mapa){
 
             int maisAlto = 0;
 
-            for(int i = 0; i < 5; i++){
+            for(int i = 0; i < 3; i++){
                 System.out.println();
-                for(int j = 0; j < 5;  j++){
+                for(int j = 0; j < 3;  j++){
                     
                     if(mapa[i][j] > maisAlto){
                         maisAlto = mapa[i][j];
@@ -423,8 +424,34 @@ public class lista2 {
             return maisAlto;
         }
 
+        public static double mediaAltitude(int[][] mapa){
 
+            int soma = 0;
+            double media = 0.0;
+            
+            for(int i = 0; i < 3; i++){
+                System.out.println();
+                for(int j = 0; j < 3; j++){
+                    soma += mapa[i][j];
+                }
+            }
+            media = soma / mapa.length;
+            return media;
+        }
 
+        public static boolean ehPlanalto(int[][] mapa){
+
+            boolean planalto = false;
+            for(int i = 0; i < 3; i++){
+                System.out.println();
+                for(int j = 0; j < 3; j++){
+                    if(mapa[i][j] == mapa[i][j]){
+                        planalto = true;
+                    }
+                }
+            }
+            return planalto;
+        }
 
         
     }
