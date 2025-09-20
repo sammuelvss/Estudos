@@ -423,7 +423,6 @@ public class lista2 {
              }
             return maisAlto;
         }
-
         public static double mediaAltitude(int[][] mapa){
 
             int soma = 0;
@@ -454,12 +453,100 @@ public class lista2 {
             return true;
         }*/
 
-        public static void main(String[] args) {
+
+    // questão 9 ------------------------------------------------------------------------
+
+
+        /*public static void main(String[] args) {
             
-            
+            int [][] resultados = new int[4][4];
+            Scanner ler = new Scanner(System.in);
+            System.out.println("Digite os resultados dos jogos (1 para vitória e 0 para derrota):");
+            for(int i = 0; i < 4; i++){
+                System.out.println();
+                for(int j = 0; j < 4; j++){
+                    int venceu  = ler.nextInt();
+                    if(venceu >= 0 && venceu <= 1){
+                    resultados[i][j] = venceu;
+                    } else {
+                        System.out.println("Valor inválido, tente novamente!");
+                        j--;
+                    }   
+                }
+            }
+            System.out.println("Vitórias por time: " + Arrays.toString(vitoriasPorTime(resultados)));
+            System.out.println("Time invicto: " + timeInvicto(resultados));
+        }
 
+        public static int[] vitoriasPorTime(int[][] resultados){
 
+            int time1 = 0;
+            int time2 = 0;
+            int time3 = 0;
+            int time4 = 0;
+            int[] vitorias = new int[4];
 
+            for(int i = 0; i < 4; i++){
+                if(resultados[0][i] == 1){
+                    time1 += resultados[0][i];
+                    vitorias[0] = time1;
+                } if(resultados[1][i] == 1){
+                    time2 += resultados[1][i];
+                    vitorias[1] = time2;
+                } if(resultados[2][i] == 1){
+                    time3 += resultados[2][i];
+                    vitorias[2] = time3;
+                } if(resultados[3][i] == 1){
+                    time4 += resultados[3][i];
+                    vitorias[3] = time4;
+                }
+            }
+            return vitorias;
+        }
+
+        public static int timeInvicto(int[][] resultados){
+		
+		
+
+		for(int i = 0; i < 4; i++){
+			
+			if(resultados[0][i] == resultados[0][0] && resultados[0][0] == 1){
+				return 1;
+			} if(resultados[1][i] == resultados[1][0] && resultados[1][0] == 1){
+				return 2;
+			} if(resultados[2][i] == resultados[2][0] && resultados[1][0] == 1){
+				return 3;
+			} if(resultados[3][i] == resultados[3][0] && resultados[1][0] == 1){
+				return 4;
+			} else {
+			return -1;		
+			}
+
+		}
+        return -1;
 
         }
-    }
+    }*/   
+
+
+    // questão 10 ------------------------------------------------------------------------
+
+
+     public static void main(String[] args) {
+       
+        int[][] matriz = {
+            {1,0,0,0,0,0,0,0,0,0},
+            {0,1,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,5,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,0,0,0,1,0},
+            {0,0,0,0,0,0,0,0,0,0}
+        };
+
+
+     }
+}
