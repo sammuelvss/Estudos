@@ -532,21 +532,116 @@ public class lista2 {
     // questão 10 ------------------------------------------------------------------------
 
 
-     public static void main(String[] args) {
+     /*public static void main(String[] args) {
        
-        int[][] matriz = {
+        int[][] mapa = {
             {1,0,0,0,0,0,0,0,0,0},
             {0,1,0,0,0,0,0,0,0,0},
             {0,0,0,0,0,0,0,0,0,0},
             {0,0,0,0,0,0,0,0,0,0},
-            {0,0,0,0,5,0,0,0,0,0},
             {0,0,0,0,0,0,0,0,0,0},
+            {0,0,0,0,0,5,0,0,0,0},
             {0,0,0,0,0,0,0,0,0,0},
             {0,0,0,0,0,0,0,0,0,0},
             {0,0,0,0,0,0,0,0,1,0},
             {0,0,0,0,0,0,0,0,0,0}
         };
 
+        System.out.println("Número de inimigos: " + contarInimigos(mapa));
+        System.out.println("Há inimigo na diagonal? " + haInimigoNaDiagonal(mapa));
+        int[] posicaoChefe = posicaoDoChefe(mapa);
+        System.out.println("Posição do chefe: (" + posicaoChefe[0] + ", " + posicaoChefe[1] + ")");
+     }
+
+     public static int contarInimigos(int[][] mapa){
+
+        int inimigos = 0;
+
+        for(int i = 0; i < mapa.length; i++){
+            for(int j = 0; j < mapa[i].length; j++){
+                if(mapa[i][j] == 1){
+                    inimigos++;
+                }
+            }
+        }
+        return inimigos;
 
      }
+     
+     public static boolean haInimigoNaDiagonal(int[][] mapa){
+
+        for(int i = 0; i < 10; i++){
+            for(int j = 0; j < 10; j++){
+                if(i == j && mapa[i][j] == 1){
+                    return true;
+                }
+            }
+        }
+        return false;
+     }
+        
+     public static int[] posicaoDoChefe(int[][] mapa){
+
+        int[] posicao = new int[2];
+
+        for(int i = 0; i < 10; i++){
+            for(int j = 0; j < 10; j++){
+                if(mapa[i][j] == 5){
+                    posicao[0] = i;
+                    posicao[1] = j;
+                }
+            }
+        }
+        return posicao;
+     }*/
+
+     // questão 11 ------------------------------------------------------------------------
+    
+    public static void main(String[] args) {
+        
+        System.out.println(ehPrimo(147, 7));
+
+
+    }
+
+
+    public static long fatorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * (n - 1);
+        }
+    }
+
+    public static String decimalParaBinario(int n) {
+        if (n == 0) {
+            return "0";
+        } else if (n == 1) {
+            return "1";
+        } else {
+            return decimalParaBinario(n / 2) + (n % 2);
+        }
+    }
+    public static int potencia(int base, int expoente){
+        if(expoente == 0){
+            return 1;
+        } else{
+            return base * potencia(base, expoente - 1);
+        }
+    }
+    public static boolean ehPrimo(int n, int divisor){
+        if(n < 2){
+            return false;
+        }
+        
+        if(divisor == 1){
+            return true;        
+        }
+
+        if (n % divisor == 0){
+            return false;
+        } else {
+            return ehPrimo(n, divisor - 1);
+        }
+    }
 }
