@@ -228,13 +228,41 @@ public class prova {
         return false;
     }*/
 
-        System.out.println(potencia(2, 3));
+        /*System.out.println(potencia(2, 3));
     }
     public static int potencia(int x, int n){
         if(n == 0){
             return 1;
         } else {
             return x * potencia(x, n - 1);
-        }
+        }*/
+
+
+        /*Scanner ler = new Scanner(System.in);
+        int [][] m1 = new int[3][3];
+        int [][] m2 = new int[3][3];
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+            m1[i][j] = ler.nextInt();
+             }
+             System.out.println();
+         }
+         int n = m2.length;
+
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                m2[j][n - 1 - i] = m1[i][j];
+             }
+         }
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                System.out.print(m2[i][j] + " ");
+             }
+             System.out.println();
+         }*/
+
+
+
+         
     }
 }
