@@ -48,7 +48,7 @@ carros[5] = "BMW";
 carros[7] = "volkswagen";*/
 
 
-/*function adicionar1(pessoa){
+/*'function adicionar1(pessoa){
 switch (pessoa){
    
 case 1:

@@ -262,7 +262,32 @@ public class prova {
          }*/
 
 
+        int [] v  = new int[5];
+        Scanner ler = new Scanner(System.in);
+        for(int i = 0; i < 5; i++){
+            v[i] = ler.nextInt();
+        }
+        selectionSort(v);
+        System.out.println();
+        for(int i = 0; i < v.length; i++){
+            System.out.println(v[i] + " ");
+        }
 
-         
     }
-}
+
+        public static void selectionSort(int [] v){
+
+            int menor = v[0];
+            int [] v2 = new int[v.length];
+            for(int i = 0; i < v.length; i++){
+                if(v[i] > menor){
+                    menor = v[i];
+                    v[v.length - i - 1] =  menor;
+                    v[i] = v[v.length - i - 1];
+                }
+            }
+
+            }
+        
+        }
+
