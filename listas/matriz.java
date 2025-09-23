@@ -121,7 +121,12 @@ for (int j = 0; j < 3; j++) {
     System.out.println();
 }*/
 
+Scanner ler = new Scanner(System.in);
 
+int [] v  = new int[5];
+for (int i = 0; i < 5; i++){
+    v[i] = ler.nextInt();
+}
 
 
 
