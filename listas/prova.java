@@ -262,7 +262,7 @@ public class prova {
          }*/
 
 
-        int [] v  = new int[5];
+        /*int [] v  = new int[5];
         Scanner ler = new Scanner(System.in);
         for(int i = 0; i < 5; i++){
             v[i] = ler.nextInt();
@@ -277,17 +277,50 @@ public class prova {
 
         public static void selectionSort(int [] v){
 
-            int menor = v[0];
-            int [] v2 = new int[v.length];
-            for(int i = 0; i < v.length; i++){
-                if(v[i] > menor){
-                    menor = v[i];
-                    v[v.length - i - 1] =  menor;
-                    v[i] = v[v.length - i - 1];
+           int n = v.length;
+            int menor;
+            for(int i = 0; i < n; i++){
+                menor = v[i];
+               
+           
+                for(int j = i + 1; j < n; j++){
+                    if(v[j] < menor){
+                        menor = v[j];
+                        int temp = v[i];
+                        v[i] = v[j];
+                        v[j] = temp;
+                    }
                 }
             }
+        }*/
 
+
+        Scanner ler = new Scanner(System.in);
+        int[][] m = new int[5][5];
+
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < 5; j++){
+                m[i][j] = i * j;
             }
-        
         }
+            System.out.println("digite um numero.");
+
+            int num = ler.nextInt();
+            int linha = 0;
+            int coluna = 0;
+            int cont = 0;
+            for(int i = 0; i < 5; i++){
+                for(int j = 0; j < 5; j++){
+                if(m[i][j] == num){
+                    linha = i;
+                    coluna = j;
+                    System.out.println("Achei " + num + " na posicao " + linha + " " + coluna);
+                    cont++;
+                } if(cont == 0 && i == 4 && j == 4){
+                    System.out.println("Numero nao encontrado");           
+                }
+            }
+        }
+    }
+}
 
