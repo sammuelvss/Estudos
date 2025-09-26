@@ -295,7 +295,7 @@ public class prova {
         }*/
 
 
-        Scanner ler = new Scanner(System.in);
+        /*Scanner ler = new Scanner(System.in);
         int[][] m = new int[5][5];
 
         for(int i = 0; i < 5; i++){
@@ -320,7 +320,121 @@ public class prova {
                     System.out.println("Numero nao encontrado");           
                 }
             }
+        }*/
+ /*int [] v = new int[10];
+        Scanner ler = new Scanner(System.in);
+        for(int i = 0; i < 10; i++){
+            v[i] = ler.nextInt();
         }
+
+        encontrarModa(v);
+    }
+
+    public static void encontrarModa(int[] v){
+        int num = 0;
+        int maior = 0;
+        int moda = 0;
+        int cont = 0;
+        for(int i = 0; i < 10; i++){
+             cont = 0;
+            num = v[i];
+            for(int j = 0; j < 10; j++){
+                if(num == v[j]){
+                    moda = num;
+                    cont++;
+                }           
+                
+            }
+            if(cont > maior){
+                if(cont == 1){
+                    System.out.println("");
+                } else{
+                        maior = cont;
+                        System.out.println("Moda: " + moda + " Repeticoes: " + maior);
+                    }
+                }
+            }*/
+
+
+                /*int[] v = {1, -2, 3, -4, 5 , -6};
+                removerNegativos(v);
+                for(int i = 0; i < v.length; i++){
+                    System.out.print(v[i] + " ");
+                }
+
+    }    public static void removerNegativos(int[] v){
+        
+        int n = v.length;
+        int num;
+
+        for(int i = 0; i < n; i++){
+           num = v[i];
+        
+        for(int j = 0; j < n / 2; j++){         
+            
+            if(num < 0 && i < n / 2){
+                int temp = v[n - i - 1];
+                v[n - i - 1] = v[i];
+                v[i] = temp;
+                
+                
+                        
+            } if(num > 0 && i >= n / 2){       
+                int temp = v[i];
+                v[i] = v[n - i - 1];
+                v[n - i - 1] = temp;
+                
+            }
+        }
+        }*/
+
+
+        int[][] m = {
+              {1, 2, 3, 4, 5, 6, 7, 8}, 
+              {9,10,11,12,13,14,15, 16},
+              {17,18,19,20,21,22,23,24},
+              {25,26,27,28,29,30,31,32},
+              {33,34,35,36,37,38,39,40},
+              {41,42,43,44,45,46,47,48},
+              {49,50,51,52,53,54,55,56},
+              {57,58,59,60,61,62,63,64}
+        };
+        char [] direcoes = {'D', 'B', 'E', 'C'};
+        System.out.println(calcularItens(m, direcoes));
+    }
+    public static int calcularItens(int[][] m, char[] direcoes){
+      
+         int linha = 0, coluna = 0; // posição inicial
+        int soma = m[linha][coluna];
+
+        for (int i = 0; i < direcoes.length; i++) {
+            char d = direcoes[i];
+            if (d == 'D' && coluna < m[0].length - 1) { // direita
+                coluna++;
+            } else if (d == 'E' && coluna > 0) {        // esquerda
+                coluna--;
+            } else if (d == 'B' && linha < m.length - 1) { // baixo
+                linha++;
+            } else if (d == 'C' && linha > 0) {         // cima
+                linha--;
+            } else {
+                System.out.println("Direção inválida ou movimento impossível!");
+                continue;
+            }
+            soma += m[linha][coluna]; // soma o novo valor
+        }
+
+        return soma;
+    }
+}
+           
+
+
+
+
+
+
+
     }
 }
 
