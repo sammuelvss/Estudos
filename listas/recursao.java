@@ -21,7 +21,7 @@ public static double somaFracao(double n){
         return (1/n) + somaFracao(n - 1);
     }
 }
-public static int fatorial(int num){
+/*public static int fatorial(int num){
     if(num  == 0){
         return 1;
     }
@@ -31,8 +31,19 @@ public static int fatorial(int num){
     public static void main(String[] args) {
         System.out.println(fatorial(5));
     }
-}    
+} */   
 
+public static int mdc(int a, int b){
+    if(b  == 0){
+        return a;
+    }
+    return mdc(b, a % b);
+}
+
+    public static void main(String[] args) {
+        System.out.println(mdc(48, 18));
+    }
+}    
 
 
 

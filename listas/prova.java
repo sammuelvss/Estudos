@@ -389,7 +389,7 @@ public class prova {
         }*/
 
 
-        int[][] m = {
+        /*int[][] m = {
               {1, 2, 3, 4, 5, 6, 7, 8}, 
               {9,10,11,12,13,14,15, 16},
               {17,18,19,20,21,22,23,24},
@@ -424,9 +424,171 @@ public class prova {
             soma += m[linha][coluna]; // soma o novo valor
         }
 
-        return soma;
+        return soma;*/
+
+
+        /*int[][] m = new int[5][10];
+
+        Scanner ler = new Scanner(System.in);
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < 10; j++){
+                m[i][j] = ler.nextInt();
+            }
+         }
+        
+         int filme = 1;
+            int idadeM = 18;
+            System.out.println("Media por filme: " + mediaPorFilme(m, filme));
+            System.out.println("Espectador mais velho: " + espectadorMaisVelho(m));
+            System.out.println("Filmes para maiores de " + idadeM + ": " + Arrays.toString(filmeParaMaiores(m, idadeM)));
+            ler.close();
+
     }
+    public static double mediaPorFilme(int[][] m, int filme){
+        double media = 0;
+        for(int j = 0; j < 10; j++){
+           if(filme == 1){
+            media += m[0][j];
+           } else if(filme == 2){
+            media += m[1][j];
+           } else if(filme == 3){
+            media += m[2][j];
+           } else if(filme == 4){
+            media += m[3][j];
+           } else if(filme == 5){
+            media += m[4][j];
+           }
+        }
+        return media / m.length;
+
+    }
+    public static int espectadorMaisVelho(int[][] m){
+        int maior = m[0][0];
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < 10; j++){
+                if(m[i][j] >= maior){
+                    maior = m[i][j];
+                }
+            }
+        }
+        return maior;
+    }
+    public static int [] filmeParaMaiores(int[][] m, int idadeM){
+        int [] v = new int[5];
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < 10; j++){
+                if(m[i][j] >= m[i][j] && m[i][j] >= idadeM){
+                    v[i] = i;
+                }
+            }
+        }
+        return v;*/
+
+        /*int[][] m = {
+            {1, 0, 0},
+            {0, 1, 0},
+            {0, 0, 1}
+        };
+        System.out.println(isIdentityMatrix(m));
+        }
+
+        public static boolean isIdentityMatrix(int[][] m){
+            int n = m.length;
+            boolean identidade = true;
+            for(int i = 0; i < n; i++){
+                for(int j = 0; j < n; j++){
+                    if(i == j && m[i][j] != 1){
+                        identidade = false;
+                    } else if(i != j && m[i][j] != 0){
+                        identidade = false;
+                    }
+                }
+            }
+            return identidade;*/
+
+
+
+            /*int [] v1 = {1, 2, 2, 3, 4};
+            int [] v2 = {2, 3, 3, 4, 6};
+     
+            intersecao(v1, v2);
+        }
+        public static void intersecao(int[] v1, int[] v2){
+         
+            for (int i = 0; i < v1.length; i++) {
+            for (int j = 0; j < v2.length; j++) {
+                if (v1[i] == v2[j]) {
+                    System.out.print(v1[i] + " ");
+                    break; // evita repetir
+                }
+            }
+         }*/
+
+
+
+         /*int[] v = {1, 2, 3, 4, 5};
+            System.out.println(somaVetor(v, 2));
+    }
+    public static int somaVetor(int[] v, int indice){
+        if(indice == v.length){
+            return 0;
+        } else {
+            return v[indice] + somaVetor(v, indice + 1);
+        }*/
+
+        /*int[] v = {1, 2, 3, 4, 5};
+        particionar(v);
+        for(int i = 0; i < v.length; i++){
+            System.out.print(v[i] + " ");
+        }
+    }
+    public static void particionar(int[] v){
+        int n = v.length;
+        int ini = 0;
+        int fim = n - 1;
+
+        for(int i = 0; i < n / 2; i ++){
+            if(v[i] % 2 == 0 ){
+                int temp = v[ini];
+                v[ini] = v[i];
+                v[i] = temp;
+                ini++;
+            }
+            if(v[i] % 2 != 0){
+                int temp = v[fim];
+                v[fim] = v[i];
+                v[i] = temp;
+                fim--;
+            }
+        }*/
+        
+
+        int[][] m = {
+            {1, 7, 3},
+            {7, 4, 5},
+            {3, 5, 6}
+
+        };
+        System.out.println(isSymmetric(m));
+        }
+        public static boolean isSymmetric(int[][] m){
+         
+            boolean simetrica = false;
+            for(int i = 0; i < 3; i++){
+                for(int j = 0; j < 3; j++){
+                    if(m[i][j] == m[j][i]){
+                        simetrica = true;
+                    } else {
+                        return false;
+                
+                 }     
+             }   
+        }
+        return simetrica;
+    }
+
 }
+
            
 
 
@@ -435,6 +597,6 @@ public class prova {
 
 
 
-    }
-}
+    
+
 
