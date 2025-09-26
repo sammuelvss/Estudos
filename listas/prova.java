@@ -563,7 +563,7 @@ public class prova {
         }*/
         
 
-        int[][] m = {
+        /*int[][] m = {
             {1, 7, 3},
             {7, 4, 5},
             {3, 5, 6}
@@ -584,10 +584,33 @@ public class prova {
                  }     
              }   
         }
-        return simetrica;
+        return simetrica;*/
+
+
+        int[] v = {1, 5, 3, 9};
+
+        System.out.println(segundoMaior(v));
     }
 
-}
+        public static int segundoMaior(int[] v){
+
+            int maior = 0;
+             int  maior2 = 0;
+            for(int i = 0; i < v.length; i++){
+                if(v[i] >= maior){
+                    maior = v[i];
+                    
+                 } if(v[i] >  maior2 && v[i] != maior){
+                        maior2 = v[i];
+                       
+                }
+            }
+             
+               return maior2;
+        }
+    }
+
+
 
            
 
