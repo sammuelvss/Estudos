@@ -149,7 +149,7 @@ adicionar2(2);*/
 
 
 
-class contaBancaria{
+/*class contaBancaria{
 
 
     constructor(saldoInicial) {
@@ -180,8 +180,58 @@ class contaBancaria{
 const minhaconta = new contaBancaria(1000);
 minhaconta.depositar(500);
 minhaconta.sacar(200);
-minhaconta.extrato();
+minhaconta.extrato();*/
 
+
+let matriz = [[1,2,3],
+              [4,5,6],  
+              [7,8,9]];
+
+    let somad2 = 0;
+    let somad = 0;
+    let somal = [];
+    let somac = [];        
+    let retorno = 1;
+    
+    for (let i = 0; i < matriz.length; i++) {
+        somad += matriz[i][i];
+        somal[i] = 0;
+        somac[i] = 0;
+        for (let j = 0; j < matriz[i].length; j++) {
+            somalinha += matriz[i][j];
+            somacoluna += matriz[j][i];
+            console.log(matriz[i][j]);
+        }
+    }
+
+    if(somal[i] !== somac[i]){
+        retorno = 0;
+    }
+    console.log("soma diagonal: " + somad);
+    console.log("soma linha: " + somal);
+    console.log("soma coluna: " + somac);
+    console.log("retorno: " + retorno);
+
+    for(let i = matriz.length -1, j = 0; i >= j; i--, j++){
+        somad2 += matriz[i][j];
+    }
+
+    console.log("soma diagonal: " + somad);
+    console.log("soma diagonal 2: " + somad2);
+   
+
+    if(somal[0] !== somad || somad !== somad2){
+        retorno = 0;
+
+    }
+
+    if(retorno){
+        console.log("é um quadrado magico");
+        return true;
+    } else {
+        console.log("não é um quadrado magico");
+        return false;
+    }
 
 
 
