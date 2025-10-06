@@ -51,18 +51,6 @@ let chart = new Chart(ctx, {
 }); 
 
  
-
-// Função para atualizar os dados aleatoriamente 
-
-/* function atualizarDados() { 
-
-  chart.data.datasets[0].data = vendas.map(() => Math.floor(Math.random() * 20) + 1); 
-
-  chart.update(); 
-
-} */
-
-
   
 function atualizarDados() {
 
