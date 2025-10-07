@@ -90,7 +90,7 @@ class lista3 {
         if(indice != -1){
             System.out.println(indice + "," + passos);
         } else {
-            System.out.println(indice);
+            System.out.println(indice + "," + passos);
         }
         
     }
