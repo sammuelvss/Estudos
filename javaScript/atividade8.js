@@ -53,16 +53,9 @@ let chart = new Chart(ctx, {
  
   
 function atualizarDados() {
-
-  const inputs = document.querySelectorAll('.valor-venda');
-  const novosDados = [];
-
-  for (let i = 0; i < inputs.length; i++) {
-    const inputAtual = inputs[i];
-    const valor = parseInt(inputAtual.value) || 0;
-    novosDados.push(valor);
-  }
+  const inputElement = document.getElementById('valores-grafico');
+  const stringDeValores = inputElement.value;
+  const novosDados = stringDeValores.split(',').map(Number);
   chart.data.datasets[0].data = novosDados;
-
   chart.update();
 }
