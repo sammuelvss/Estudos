@@ -67,7 +67,7 @@ class lista3 {
 
     //q3
  
-    Scanner ler = new Scanner(System.in);
+    /*Scanner ler = new Scanner(System.in);
         System.out.println("Digite o tamanho do vetor:");
         int n = ler.nextInt();
         System.out.println("qual numero você quer buscar no vetor?");
@@ -129,5 +129,32 @@ class lista3 {
             }
             return new int[] {-1, cont};
         }
-    }
+    }*/
 
+     Scanner ler = new Scanner(System.in);
+        int cont = 0;
+        System.out.println("Digite o tamanho da matriz:");
+        int l = ler.nextInt();
+        int c = ler.nextInt();
+        ler.nextLine();
+        System.out.println("Você tem uma matriz " + l + "por " + c + "!");
+        String [][] m =  new String[l][c];
+        String [] v = new String[l];
+        for(int i = 0; i < v.length; i++){
+            System.out.println("Digite o gênero (" + i + ") :");
+            v[i] = ler.nextLine();
+        }
+        System.out.println("digite " + c + " filmes em ordem alfabética:");
+        for(int i = 0; i < m.length; i++){
+            System.out.println("Digite os filmes do gênero: " + v[i]);
+            for(int j = 0; j < m[0].length; j++){
+                System.out.println("filme ("+ i + ")");
+                m[i][j] = ler.nextLine();
+            }
+        }
+
+        System.out.println("digite o nome do filme:");
+        String busca = ler.nextLine(); 
+        
+    }
+}
