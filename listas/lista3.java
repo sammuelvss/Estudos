@@ -137,24 +137,60 @@ class lista3 {
         int l = ler.nextInt();
         int c = ler.nextInt();
         ler.nextLine();
-        System.out.println("Você tem uma matriz " + l + "por " + c + "!");
+        System.out.println("Você tem uma matriz " + l + " 3por " + c + "!");
         String [][] m =  new String[l][c];
         String [] v = new String[l];
         for(int i = 0; i < v.length; i++){
-            System.out.println("Digite o gênero (" + i + ") :");
+            System.out.println("Digite o gênero (" + (i+1) + ") :");
             v[i] = ler.nextLine();
         }
         System.out.println("digite " + c + " filmes em ordem alfabética:");
         for(int i = 0; i < m.length; i++){
             System.out.println("Digite os filmes do gênero: " + v[i]);
             for(int j = 0; j < m[0].length; j++){
-                System.out.println("filme ("+ i + ")");
+                System.out.println("filme ("+ (j+1) + ")");
                 m[i][j] = ler.nextLine();
             }
         }
 
         System.out.println("digite o nome do filme:");
-        String busca = ler.nextLine(); 
-        
+        String busca = ler.nextLine();
+        if(buscarTitulo(m, busca, v) < 0){
+            System.out.println("Título não encontrado!");
+        } else {
+        for(int i = 0; i < v.length; i++){
+            if (buscarTitulo(m, busca, v) == i){
+                System.out.println(v[i]);
+            }
+        }
+        }
     }
-}
+    public static int buscarTitulo(String [][] m, String busca, String [] V){
+         
+            int colunas = m[0].length;
+          
+            int inicio;
+            int fim;
+            for (int i = 0; i < m.length; i ++){
+                for(int j = 0; j < m[0].length; j++){
+            inicio = 0;
+            fim = colunas - 1;
+                    while (inicio <= fim){
+                        int meio = inicio + (fim - inicio)/2;
+                        String primeiroElemento = m[i][0];                       
+                        if (m[i][meio].equals(busca)){
+                            return i;
+                        }
+                        if (busca.compareTo(primeiroElemento) < 0) {
+                            fim = meio - 1;
+                        } else {
+                            inicio = meio + 1;
+                        }
+                    }
+                }
+            }
+            return -1;
+
+        }
+    }
+
