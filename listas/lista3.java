@@ -131,7 +131,9 @@ class lista3 {
         }
     }*/
 
-     Scanner ler = new Scanner(System.in);
+    // q4 
+
+     /*Scanner ler = new Scanner(System.in);
         int cont = 0;
         System.out.println("Digite o tamanho da matriz:");
         int l = ler.nextInt();
@@ -192,5 +194,58 @@ class lista3 {
             return -1;
 
         }
-    }
+    }*/
 
+    // q5
+
+    Scanner ler = new Scanner(System.in);
+        System.out.println("Digite a quantidade de produtos:");
+        int p = ler.nextInt();
+        int [][] m = new int[p][];
+        for (int i = 0; i < p; i++) {    
+        System.out.println("Digite o número de anos que vendas foram registradas:");
+        int n = ler.nextInt();
+        m[i] = new int[n];
+        System.out.println("Digite as vendas do produto " + (i + 1) + ":");
+        for (int k = 0; k < n; k++) {        
+             m[i][k] = ler.nextInt();
+        }
+    }  
+        inserctionSort(m, p);
+        for (int i = 0; i < p; i++) {
+            System.out.println("Vendas ordenadas do produto " + (i + 1) + ":");
+            
+            for (int j = 0; j < m[i].length; j++) {
+                System.out.print(m[i][j] + " ");
+            }
+            System.out.println();
+            if(m[i].length % 2 == 0){
+                int meio1 = m[i].length / 2;
+                int meio2 = meio1 - 1;
+                double mediana = (m[i][meio1] + m[i][meio2]) / 2.0;
+                System.out.println("Mediana: " + mediana);
+            } else {
+                int meio = m[i].length / 2;
+                double mediana = m[i][meio];
+                System.out.println("Mediana: " + mediana);
+             }
+             System.out.println();
+        }
+    }
+        
+        
+    public static void inserctionSort(int [][] m, int p){
+        for(int i = 0; i < p; i++){
+            int n = m[i].length;
+            for(int j = 1; j < n; j++){
+                int aux = m[i][j];
+                int k = j - 1;
+                while(k >= 0 && m[i][k] > aux){
+                    m[i][k + 1] = m[i][k];
+                    k--;
+                }
+                m[i][k + 1] = aux;
+            }
+        }
+    }
+}
