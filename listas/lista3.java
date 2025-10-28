@@ -260,38 +260,44 @@ class lista3 {
             for(int i = 0; i < s;  i++){
                 System.out.println("digite a quantidade de livros da seção " + (i+1) + ":");
                 int l = ler.nextInt();
-                m[s] = new double[l];
+                m[i] = new double[l];
                 System.out.println("digite os valores dos livros da seção "+ (i+1) + ":");
                 for(int j = 0; j < l; j++){
                     System.out.println("livro (" + (j+1) + ")");
                     m[i][j] = ler.nextDouble();
                 }                
             }   
-            selectionSort(double [][] m, int s)
-            for(int i = 0; i < s; i++){
-                for(int j = 0; j < l; j++){
-                    System.out.println("Preços Ordenados: " + m[i][j] )
-                    System.out.println("Menor preço: " + m[i][0] + "Maior Preço: " + m[i][m[0].length - 1])
+            int linhas = m.length;
+            selectionSort(m, linhas);
+            for(int i = 0; i < m.length; i++){
+                System.out.println("Seção: " + (i+1));
+                System.out.println("Preços Ordenados:");
+                for(int j = 0; j < m[i].length; j++){
+                    System.out.print( m[i][j] + " ");            
                 }
-                
+                if(m[i].length > 0){
+                System.out.println("Menor preço: " + m[i][0] + " Maior Preço: " + m[i][(m[i].length - 1)]);
+                } else {
+                    System.out.println("Essa seção não tem livros!");
+                    }
+                }
             }
-        }
-            public static void selectionSort (double [][] m, int s){
-
-                for(int k = 0; k < s; k++){
-                    for(int i = 0; i < m[0].length - 1; i++){
+            public static void selectionSort (double [][] m, int linhas){
+              
+                for(int k = 0; k < linhas; k++){
+                    int n = m[k].length;
+                    for(int i = 0; i < n - 1; i++){
                         int min = i;
-                        for(int j = i + 1; j < m[0].length; j++){
-                            if(m[i][j] < min){
+                        for(int j = i + 1; j < n; j++){
+                            if(m[k][j] < m[k][min]){
                                 min = j;
                             }
                         }
-                        double temp = m[i][min];
-                        m[i][min] = m[i][i];
-                        m[i][i] = temp; 
+                        double temp = m[k][min];
+                        m[k][min] = m[k][i];
+                        m[k][i] = temp; 
                     }
                 }
-
-
             }
         }
+
