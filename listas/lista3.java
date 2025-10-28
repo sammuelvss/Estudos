@@ -253,7 +253,7 @@ class lista3 {
 
 // q6 
 
-        Scanner ler = new Scanner(System.in);
+        /*Scanner ler = new Scanner(System.in);
             System.out.println("Digite quantas seções de livros há na biblioteca:");
             int s = ler.nextInt();
             double[][] m = new double[s][];
@@ -299,5 +299,43 @@ class lista3 {
                     }
                 }
             }
+        }*/
+
+        // q7
+
+        Scanner ler = new Scanner(System.in);
+        System.out.println("Digite a quantidade de avaliações do filme:");
+        int A = ler.nextInt();
+        int[] v = new int[A];
+        System.out.println("Digite as avaliações:");
+        for(int i = 0; i < v.length; i++){
+            System.out.println("Avaliação (" + (i+1) + ")");{
+                v[i] = ler.nextInt();
+            }
         }
+        bubbleSort(v);
+        System.out.println("Avaliações ordenadas:");
+        for(int i = 0; i < v.length; i++){
+        System.out.print(v[i] + " ");
+        }
+
+        System.out.println("\nPior avaliação: " + v[(v.length-1)]);
+        System.out.println("Melhor avaliação: " + v[0]);
+
+    }
+    public static void bubbleSort(int [] v){
+
+        int n = v.length;
+         int temp = 0;
+            for(int i = 0; i < n; i++){
+                for(int j = 1; j < (n - i); j++){
+                    if(v[j - 1] < v[j]){
+                        temp = v[j -1];
+                        v[j - 1] = v[j];
+                        v[j] = temp;
+                    }
+                }
+            }
+    }
+}
 
