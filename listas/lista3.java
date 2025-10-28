@@ -198,7 +198,7 @@ class lista3 {
 
     // q5
 
-    Scanner ler = new Scanner(System.in);
+    /*Scanner ler = new Scanner(System.in);
         System.out.println("Digite a quantidade de produtos:");
         int p = ler.nextInt();
         int [][] m = new int[p][];
@@ -248,4 +248,50 @@ class lista3 {
             }
         }
     }
-}
+}*/
+
+
+// q6 
+
+        Scanner ler = new Scanner(System.in);
+            System.out.println("Digite quantas seções de livros há na biblioteca:");
+            int s = ler.nextInt();
+            double[][] m = new double[s][];
+            for(int i = 0; i < s;  i++){
+                System.out.println("digite a quantidade de livros da seção " + (i+1) + ":");
+                int l = ler.nextInt();
+                m[s] = new double[l];
+                System.out.println("digite os valores dos livros da seção "+ (i+1) + ":");
+                for(int j = 0; j < l; j++){
+                    System.out.println("livro (" + (j+1) + ")");
+                    m[i][j] = ler.nextDouble();
+                }                
+            }   
+            selectionSort(double [][] m, int s)
+            for(int i = 0; i < s; i++){
+                for(int j = 0; j < l; j++){
+                    System.out.println("Preços Ordenados: " + m[i][j] )
+                    System.out.println("Menor preço: " + m[i][0] + "Maior Preço: " + m[i][m[0].length - 1])
+                }
+                
+            }
+        }
+            public static void selectionSort (double [][] m, int s){
+
+                for(int k = 0; k < s; k++){
+                    for(int i = 0; i < m[0].length - 1; i++){
+                        int min = i;
+                        for(int j = i + 1; j < m[0].length; j++){
+                            if(m[i][j] < min){
+                                min = j;
+                            }
+                        }
+                        double temp = m[i][min];
+                        m[i][min] = m[i][i];
+                        m[i][i] = temp; 
+                    }
+                }
+
+
+            }
+        }
