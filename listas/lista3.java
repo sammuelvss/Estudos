@@ -56,7 +56,7 @@ class lista3 {
         for (int i = 0; i < n; i++) {
             nomeLivro = livros[i];
             if (nomeLivro.toLowerCase().contains(palavraChave.toLowerCase())) {
-                System.out.println(livros[i]);
+                System.out.println(livros[i]); 
                 encontrado = true;
             } else if (!encontrado && i == n - 1) {
                 System.out.println("Nenhum livro encontrado");
@@ -115,6 +115,7 @@ class lista3 {
             int fim = n - 1;
             
             while(inicio <=  fim){
+                cont++;
                 int meio = (inicio + (fim -  inicio))/2;
                 
                 if(v[meio] == numero){
@@ -124,8 +125,7 @@ class lista3 {
                     inicio = meio + 1;
                 } else {
                     fim =  meio -  1;
-                }
-                cont ++;
+                } 
             }
             return new int[] {-1, cont};
         }
@@ -329,7 +329,7 @@ class lista3 {
          int temp = 0;
             for(int i = 0; i < n; i++){
                 for(int j = 1; j < (n - i); j++){
-                    if(v[j - 1] < v[j]){
+                    if(v[j -  1] < v[j]){
                         temp = v[j -1];
                         v[j - 1] = v[j];
                         v[j] = temp;
