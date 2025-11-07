@@ -123,8 +123,7 @@ public class prova {
         }
     }*/
 
-        Scanner ler = new Scanner(System.in);
-
+        /*Scanner ler = new Scanner(System.in);
 
         System.out.println("digite as linhas");
         int l = ler.nextInt();
@@ -165,8 +164,38 @@ public class prova {
                 }
                 return "não encontrado!";
             }
+        }*/
+        Scanner ler = new Scanner(System.in);
+        int n = ler.nextInt();
+        int [] v = new int[n];
+         for(int i = 0; i < v.length; i++){
+            v[i] = ler.nextInt();
         }
-    
+        bubbleSortOtimizado(v);
+
+
+    }
+        public static int bubbleSortOtimizado(int [] v){
+
+            int n = v.length;
+            for(int i = 0; i < n - 1; i++){
+                boolean parada = false; 
+                for(int j = 1; j < n; j++){
+                    if(v[j-1] > v[j]){
+                        int temp = v[j-1];
+                        v[j-1] = v[j];
+                        v[j] =  temp;
+                        parada = true;        
+                    }
+                }
+                if(parada == false){
+                    return i+1;
+                }
+            }
+            return n-1;
+        }
+    }
+
 
 
     
