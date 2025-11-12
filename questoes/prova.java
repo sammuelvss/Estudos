@@ -322,7 +322,7 @@ public class prova {
             }
         }*/
 
-        public static int buscaBinariaPrimeiraOcorrencia(int [] v, int x){
+        /*public static int buscaBinariaPrimeiraOcorrencia(int [] v, int x){
             int cont = 0;
             int ini = 0;
             int fim = v.length-1;
@@ -343,4 +343,6 @@ public class prova {
                 }
             }
             return -1;
-        }
+        }*/
+
+        
