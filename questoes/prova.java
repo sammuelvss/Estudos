@@ -345,4 +345,90 @@ public class prova {
             return -1;
         }*/
 
-        
+        /*public static void selectionSortDuplo(int [] v){
+
+            int n = v.length;
+            for(int i = 0; i < n/2; i++){
+                int menor = i;
+                int maior = i;
+                for(int j = i + 1; j < n - i; j++){
+                    if(v[j] > v[maior]){
+                        maior = j;
+                    } if(v[j] < v[menor]) {
+                        menor = j;
+                    }
+                }
+                int temp = v[maior];
+                v[maior] = v[n-1-i];
+                v[n-1-i] = temp;
+
+                if(menor == n-1-i){
+                    menor = maior;
+                }
+                temp = v[menor];
+                v[menor] = v[i];
+                v[i] = temp;
+            }
+            }
+        }*/
+
+        /*public static void cocktailSort(int [ ] v){
+
+            int n = v.length;
+            int ini = 0;
+            int fim = n-1;
+            while(ini < fim){
+                for(int j = 0; j < fim; j++){
+                    if(v[j] > v[j+1]){
+                        int temp1 = v[j];
+                        v[j] = v[j+1];
+                        v[j+1] = temp1;
+                    }
+                }fim--;
+
+                    for(int p = fim ; p > ini; p--){
+                        if(v[p] < v[p-1]){
+                            int temp2 = v[p-1];
+                            v[p-1] = v[p];
+                            v[p] = temp2;
+                        }
+                    }ini++;
+                
+                }
+         }*/
+
+         /*public static int buscaBinariaRotacionada(int[] v, int x){
+
+            int n = v.length;
+            int ini = 0;
+            int fim = n-1;
+            boolean ordenada = true;
+            boolean ordenadaDire = true;
+            while(ini <= fim){
+                int meio = ((ini+fim)/2);
+                if(v[meio] == x){
+                    return meio;
+                }
+                if(v[ini] <= v[meio]){
+                    ordenada = true;
+                } else {
+                    ordenada = false;
+                }
+                 if (ordenada == true) { 
+                       
+                if (x >= v[ini] && x < v[meio]) {
+                    fim = meio - 1; 
+                } else {
+                    ini = meio + 1;
+                }           
+                } else { 
+                
+                if (x > v[meio] && x <= v[fim]) {
+                    ini = meio + 1; 
+                } else {
+                    fim = meio - 1;
+                }
+            }
+            return -1
+         }
+        }*/
