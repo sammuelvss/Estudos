@@ -432,3 +432,45 @@ public class prova {
             return -1
          }
         }*/
+        
+
+        /*public static void bubbleSortUltraOtimizado(int [] v){
+
+            int n = v.length;
+            
+            for(int i = n-1; i > 0; i--){
+                boolean trocou = false;
+                for(int j = 0; j < i; j++){
+                    if(v[j] > v[j+1]){
+                        int temp = v[j];
+                        v[j] = v[j+1];
+                        v[j+1] = temp;
+                        trocou = true;
+                    }
+                }
+                if(trocou == false){
+                    break;
+                }
+            }
+        }*/
+
+        public static int encontraRotacionado(int [] v){
+
+            int n = v.length;
+            int ini = 0;
+            int fim =n-1;
+
+            while(ini < fim){
+
+                int meio = ((ini+fim)/2);
+                if(meio > 0 && v[meio] < v[meio-1]){
+                    return meio;
+                }
+                if(v[meio] > v[fim]){
+                    ini = meio + 1;
+                } else {
+                    fim = meio;
+                }
+            }
+            return ini;
+        }
