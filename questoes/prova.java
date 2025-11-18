@@ -454,7 +454,7 @@ public class prova {
             }
         }*/
 
-        public static int encontraRotacionado(int [] v){
+        /*public static int encontraRotacionado(int [] v){
 
             int n = v.length;
             int ini = 0;
@@ -473,4 +473,163 @@ public class prova {
                 }
             }
             return ini;
+        }*/
+
+        /*public static int buscaBinariaOrdenada(int [][] m, int x){
+
+            int n = m[0].length;
+
+            for(int i = 0; i < n; i++){
+
+                int fim = m[0].length;
+                int ini = 0;
+                while(ini <= fim){
+                    int meio = ((ini + fim)/2);
+                    if(m[i][meio] == x){
+                        return meio;
+                    } 
+                    if(m[i][meio] > x){
+                        fim = meio - 1;
+                    } else {
+                        ini = meio + 1;
+                    }
+                }
+            }
+            return -1
+        }*/
+
+
+        // CÓDIGO COM BUGS PARA ANÁLISE
+/*public static void selectionSortBugado(int[] v) {
+    int n = v.length;
+    
+    // Loop 'i' (passagens)
+    for (int i = 0; i < n; i++) { // aqui deveria ser colocado "i < n - 1"
+        
+        int iMenor = 0; // o iMenor deveria ser igual a i
+        
+        // Loop 'j' (busca pelo menor)
+        for (int j = i + 1; j < n; j++) {
+            
+            // Comparação
+            if (v[j] < v[iMenor]) { // a comparação deveria ser v[j] < v[j-1]
+                
+                // Armazenamento
+                iMenor = v[j]; // o iMenor deve ser igual a j, não a v[j]?
+            }
         }
+        
+        // Troca
+        int temp = v[iMenor]; // a troca está invertida, deveria ser colocado v[i] no lugar do v[iMenor]
+        v[iMenor] = v[i];
+        v[i] = temp;
+    }
+}*/
+
+
+        /*public static int raizQuadradaBinaria(int n){
+
+            int ini = 0;
+            int fim = n;
+           
+
+            while(ini <=  fim){
+
+                int meio = ((ini + fim)/2);
+                long quadrado = (long)meio * (long)meio;
+                
+                if(quadrado == n){
+                    return meio;
+                }
+                if(quadrado > n){          
+                    fim = meio-1;
+                } else {
+                    ini = meio + 1;
+                }
+            }
+            return fim;
+        }*/
+
+
+
+        /*public static int buscaBinariaUltimaOcorrencia(int[]v, int x){
+
+            int ini = 0;
+            int fim = v.length-1;
+            int indice = -1;
+
+            while(ini <= fim){
+                int meio = ((ini + fim)/2);
+                if(v[meio] == x){
+                    indice = meio;
+                    ini = meio + 1;
+                } 
+                else if(v[meio] > x){
+                    fim = meio - 1;
+                } else {
+                    ini = meio + 1;
+                }
+            }
+            return indice;
+            }*/
+
+        /*public static int bubbleSortContandoTrocas(int []v){
+
+            int n = v.length;
+            int swap = 0;
+            for(int i = n-1; i > 0; i--){
+                for(int j = 0; j < i; j++){
+                    if(v[j] > v[j+1]){
+                        int temp = v[j+1];
+                        v[j+1] = v[j];
+                        v[j] = temp;
+                        swap++;
+                    }
+                }
+            }
+            return swap;
+        }*/
+
+
+        /*public static void cocktailSortUltraOtimizado(int[]v){
+
+            int n = v.length;
+            int ini = 0;
+            int fim = n-1;
+            boolean trocou = true;
+            while(trocou == true && ini < fim){        
+                trocou = false;
+
+            for(int i = ini; i < fim; i++){              
+                if(v[i] > v[i+1]){
+                    int temp = v[i+1];
+                    v[i+1] = v[i];
+                    v[i] = temp;
+                    trocou = true;
+                }
+            }fim--;
+
+            if(trocou == false){
+                break;
+            }
+            trocou = false;
+            for(int j = fim; j > ini; j--){
+                if(v[j] < v[j-1]){
+                    int temp = v[j-1];
+                    v[j-1] = v[j];
+                    v[j] = temp;
+                    trocou = true;
+                }
+            } ini++;
+            
+            }
+        }*/
+
+     
+
+
+        
+
+
+
+            
