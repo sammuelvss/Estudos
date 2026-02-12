@@ -624,8 +624,31 @@ public class prova {
             
             }
         }*/
+    }
+     public static int buscaBitonica(int[]v, int x){
 
-     
+        int n = v.length;
+        int ini = 0;
+        int fim = n-1;
+        int ipico = -1;
+
+        while(ini <= fim){
+            int meio = ((ini + fim)/2);
+            if(v[meio] > v[meio+1] && v[meio] > v[meio-1]){
+                ipico = meio;
+            }
+            if(v[meio] == x){
+                return meio;
+            } else if(v[meio] > x){
+                fim = ipico - 1;
+            }else{
+                ini = ipico + 1;
+            }
+        }
+        return -1;
+     }
+    }
+
 
 
         
