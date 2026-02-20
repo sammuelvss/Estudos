@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        circulo c1 = new circulo(2);
+        /*circulo c1 = new circulo(2);
         circulo c2 = new circulo(5);
         System.out.println(c1.area());
         System.out.println(c2.area());
@@ -32,6 +32,37 @@ public class Main {
 
     public static void quad(double lado, double area, double comprimento){
         System.out.println("O quadrado de lado " + lado + " tem " + area + " de área e " + comprimento + " de comprimento.");
+*/
+
+        /*triangulo t  = new triangulo(2,3);
+        t.exibe();*/
+
+        ContaBancaria c = new ContaBancaria(, 0, 0)
+        Scanner ler = new Scanner(System.in);
+        System.out.println("crie uma conta bancaria (1)");
+        System.out.println("depositar (2)");
+        System.out.println("sacar (3)");
+        System.out.println("exibir saldo (4)");
+        System.out.println("sair (0)");
+        
+        int numero = ler.nextInt();
+        if(numero == 1){
+            System.out.println("Digite seu nome");
+            String nome = ler.nextLine();
+            System.out.println("digite o numero da conta");
+            int nConta = ler.nextInt();
+            System.out.println("digite o saldo da conta");
+            int valor = ler.nextInt();
+        }else if (numero == 2){
+        System.out.println(c);
+        ContaBancaria c = new ContaBancaria(valor, saldo);
+        }
+        
 
     }
 }
+
+
+
+
+
