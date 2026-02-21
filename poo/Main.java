@@ -37,28 +37,72 @@ public class Main {
         /*triangulo t  = new triangulo(2,3);
         t.exibe();*/
 
-        ContaBancaria c = new ContaBancaria(, 0, 0)
         Scanner ler = new Scanner(System.in);
-        System.out.println("crie uma conta bancaria (1)");
-        System.out.println("depositar (2)");
-        System.out.println("sacar (3)");
-        System.out.println("exibir saldo (4)");
-        System.out.println("sair (0)");
-        
-        int numero = ler.nextInt();
-        if(numero == 1){
-            System.out.println("Digite seu nome");
-            String nome = ler.nextLine();
-            System.out.println("digite o numero da conta");
-            int nConta = ler.nextInt();
-            System.out.println("digite o saldo da conta");
-            int valor = ler.nextInt();
-        }else if (numero == 2){
-        System.out.println(c);
-        ContaBancaria c = new ContaBancaria(valor, saldo);
-        }
-        
 
+        int numero = -1;
+        ContaBancaria c = null;
+
+        do {
+            System.out.println();
+            System.out.println("|||-------------------BANCO------------------|||");
+            System.out.println("Crie uma conta bancaria (1)");
+            System.out.println("|||------------------------------------------|||");
+            System.out.println("Depositar (2)");
+            System.out.println("|||------------------------------------------|||");
+            System.out.println("Sacar (3)");
+            System.out.println("|||------------------------------------------|||");
+            System.out.println("Exibir saldo (4)");
+            System.out.println("|||------------------------------------------|||");
+            System.out.println("Sair (0)");
+
+            numero = ler.nextInt();
+
+            if (numero == 1) {
+                System.out.println("-------------CRIAR CONTA--------------");
+                System.out.println("Digite seu nome:");
+                ler.nextLine();
+                String nomeT = ler.nextLine();
+                System.out.println("|||------------------------------------------|||");
+                System.out.println("Digite o numero da conta:");
+                int nConta = ler.nextInt();
+                System.out.println("|||------------------------------------------|||");
+                System.out.println("Digite o saldo inicial da conta:");
+                double saldo = ler.nextDouble();
+                System.out.println("|||------------------------------------------|||");
+                c = new ContaBancaria(nomeT, nConta, saldo);
+                System.out.println();
+                System.out.println("CONTA CRIADA COM SUCESSO!!");
+                System.out.println();
+
+            } else if (numero == 2) {
+                System.out.println("|||----------------------DEPOSITO--------------------|||");
+                if (c != null) {
+                    System.out.println("Qual o valor do deposito?");
+                    double valor = ler.nextDouble();
+                    c.deposito(valor);
+                } else {
+                    System.out.println("-------------Crie uma conta primeiro!-------------");
+                }
+            } else if (numero == 3) {
+                System.out.println("|||---------------------SAQUE---------------------|||");
+                if (c != null) {
+                    System.out.println("Qual o valor do saque?");
+                    double valorS = ler.nextDouble();
+                    c.saque(valorS);
+                    c.exibir();
+                } else {
+                    System.out.println("-------------Crie uma conta primeiro!-------------");
+                }
+            } else if (numero == 4) {
+                System.out.println("|||--------------------DADOS----------------------|||");
+                if (c != null) {
+                    c.exibir();
+                } else {
+                    System.out.println("-------------Crie uma conta primeiro!-------------");
+                }
+            }
+        } while (numero != 0);
+        ler.close();
     }
 }
 

@@ -52,30 +52,37 @@ public class ContaBancaria {
     String nome;
     int nConta;
     double saldo;
-    double valor;
+    
 
     ContaBancaria(String nome, int nConta, double saldo){
         this.nome = nome;
         this.nConta = nConta;
         this.saldo = saldo;
     }
-     void deposito( double saldo, double valor){
-        double depositar = valor;  
+    public void deposito(double saldoI){
         
-        saldo = saldo + depositar;
-        
+        if(saldoI >= 0){
+        saldo = saldoI + saldo;
+        } else {
+            System.out.println("erro.");
+        }
+    
     }
 
-    void saque(double saldo){
-        double sacar = valor;  
+    public void saque(double sacar){
+        
+        if(saldo >= sacar){  
         saldo = saldo - sacar;
-        
+        }
+        else{
+            System.out.println("saldo insuficiente.");
+        }
     }
 
-    void exibir (){
-        System.out.println("nome:" + nome);
-        System.out.println("Número:" + nConta);
-        System.out.println("saldo:" + saldo);
+    public void exibir (){
+        System.out.println("Nome:" + this.nome);
+        System.out.println("Número da conta:" + this.nConta);
+        System.out.println("Saldo:" + this.saldo);
     }
 
     
