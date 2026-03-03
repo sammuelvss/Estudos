@@ -8,6 +8,11 @@ public class Main {
         System.out.println(c1.area());
         System.out.println(c2.area());
 
+
+
+//=============================================================================
+//=============================================================================
+
         ret re1 = new ret(3,5);
         ret re2 = new ret(6,2);
         ret re3 = new ret();
@@ -16,6 +21,9 @@ public class Main {
         System.out.println(re3.area());
 
         System.out.println("-----------");
+
+//=============================================================================
+//=============================================================================
 
         quadrado q1 = new quadrado(5);
         System.out.println(q1.area());
@@ -33,6 +41,11 @@ public class Main {
     public static void quad(double lado, double area, double comprimento){
         System.out.println("O quadrado de lado " + lado + " tem " + area + " de área e " + comprimento + " de comprimento.");
 */
+
+
+//=============================================================================
+//=============================================================================
+
 
         /*triangulo t  = new triangulo(2,3);
         t.exibe();*/
@@ -106,6 +119,9 @@ public class Main {
     }
 }*/
 
+//=============================================================================
+//=============================================================================
+
 
     /*hora h1 = new hora(10, 20, 30);
     data d1 = new data(1, 1 ,2005, h1);
@@ -118,7 +134,11 @@ public class Main {
 
     }
 }*/
-    Scanner ler = new Scanner(System.in);
+
+//=============================================================================
+//=============================================================================
+
+    /*Scanner ler = new Scanner(System.in);
     endereco ende = null;
     data d = null;
     telefone tele = null;
@@ -167,14 +187,57 @@ public class Main {
     C = new cliente(nomeL, rg, cpf, ano, d, ende);
     System.out.println("========================================\n=====================================");
     
-    System.out.println(cliente);
+    System.out.println(C.ToString());
     System.out.println("Quer finalizar? digite [0]");
+    ler.nextLine();
     }while(numero != 0);
 
 
 
     }
+}*/
+
+//=============================================================================
+//=============================================================================
+
+/*Pessoa pessoa = new Pessoa("João", 25);
+
+System.out.println("Nome: " + pessoa.getNome());
+System.out.println("Idade: " + pessoa.getIdade());
+
+pessoa.setNome("Maria");
+pessoa.setIdade(30);
+
+System.out.println("Nome atualizado: " + pessoa.getNome());
+System.out.println("Idade atualizada: " + pessoa.getIdade());
+
+    }
+}*/
+
+//=============================================================================
+//=============================================================================
+
+
+    Departamento dep1 = new Departamento(1, "Recursos Humanos");
+    Funcionario func1 = new Funcionario(123, "Alice", dep1);
+
+    System.out.println(dep1.toString());
+    System.out.println(func1.toString());
+
+    dep1.setCodigo(2);
+    dep1.setNome("Financeiro");
+
+    System.out.println(dep1.toString());
+    System.out.println(func1.toString());
+
+
+    }
 }
+
+//=============================================================================
+//=============================================================================
+
+
 
 
 
