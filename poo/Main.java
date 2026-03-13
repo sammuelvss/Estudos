@@ -218,7 +218,7 @@ System.out.println("Idade atualizada: " + pessoa.getIdade());
 //=============================================================================
 
 
-    Departamento dep1 = new Departamento(1, "Recursos Humanos");
+    /*Departamento dep1 = new Departamento(1, "Recursos Humanos");
     Funcionario func1 = new Funcionario(123, "Alice", dep1);
 
     System.out.println(dep1.toString());
@@ -232,14 +232,48 @@ System.out.println("Idade atualizada: " + pessoa.getIdade());
 
 
     }
+}*/
+
+//=============================================================================
+//=============================================================================
+
+    /*Scanner ler = new Scanner(System.in);
+    String nome, info;
+    int idade;
+
+    nome = ler.next();
+    idade = ler.nextInt();
+    info = ler.next();
+    pessoaFisica pf = new pessoaFisica(nome, idade, info);
+    imprime(pf);
+
+    nome = ler.next();
+    idade = ler.nextInt();
+    info = ler.next();
+    pessoaJuridica pj = new pessoaJuridica(nome, idade, info);
+    imprime(pj);
+    }
+    public static void imprime(Pessoa p){
+        System.out.println("Nome da pessoa: " + p.getNome() );
+        System.out.println("idade da pessoa: " + p.getIdade() );
+        if (p instanceof pessoaFisica){
+        System.out.println("cpf da pessoa: " + ((pessoaFisica)p).getCpf());
+    }else{
+        System.out.println("cnpj da pessoa" + ((pessoaJuridica)p).getCnpj());
+    }
+
+    }
+}*/
+
+
+//=============================================================================
+//=============================================================================
+
+    
+
+
+
+    }
 }
-
-//=============================================================================
-//=============================================================================
-
-
-
-
-
 
 
