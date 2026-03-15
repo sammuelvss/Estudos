@@ -1,6 +1,7 @@
 package poo;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -293,13 +294,35 @@ public class Main {
         // =============================================================================
 
         Scanner ler = new Scanner(System.in);
-        String nome, raca;
+        int num = -1;
+        int cont = 0;
+        ArrayList<Cachorro> dogs = new ArrayList<>();
+        while (num != 0) {
 
-        Cachorro c1 = new Cachorro(ler.next(), ler.next());
+            System.out.println("1- Cadastrar Cão | 2- Listar Todos | 3- Sair");
+            int numero = ler.nextInt();
 
-        cachorroAdestrado ad = new cachorroAdestrado(ler.next(), ler.next());
-        imprime(c1);
-        imprime(ad);
+            if (numero == 1) {
+
+                for (int i = 0; i <= 5; i++) {
+                    if (i % 2 == 0) {
+                        dogs.add(new Cachorro(ler.next(), ler.next()));
+                    } else {
+                        dogs.add(new cachorroAdestrado(ler.next(), ler.next()));
+                        cont++;
+                    }
+                }
+            } else if (numero == 2) {
+                for (Cachorro d : dogs) {
+                    imprime(d);
+                }
+                System.out.println("tem " + cont + " cachorros adestrados!");
+            } else if (numero == 3) {
+                num = 0;
+            } else {
+                System.out.println("Número inválido!");
+            }
+        }
     }
 
     public static void imprime(Cachorro c) {
@@ -313,8 +336,10 @@ public class Main {
             ad.deitar();
             ad.rolar();
             ad.fingirDeMorto();
+            System.out.println("\n\n");
         } else {
-            System.out.println("Cachorro sem adrestamento!");
+            System.out.println("Cachorro sem adrestamento!\n\n");
         }
     }
+
 }
