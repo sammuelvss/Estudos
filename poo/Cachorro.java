@@ -10,6 +10,18 @@ public class Cachorro {
         this.raca = raca;
     }
 
+    public void latir() {
+        System.out.println("au au");
+    }
+
+    public void dormir() {
+        System.out.println("zzzZZz");
+    }
+
+    public void comer() {
+        System.out.println("comendo...");
+    }
+
     public String getNome() {
         return this.nome;
     }
