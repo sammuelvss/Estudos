@@ -296,17 +296,27 @@ public class Main {
         Scanner ler = new Scanner(System.in);
         int num = -1;
         int cont = 0;
+
         ArrayList<Cachorro> dogs = new ArrayList<>();
         while (num != 0) {
 
             System.out.println("1- Cadastrar Cão | 2- Listar Todos | 3- Sair");
             int numero = ler.nextInt();
-
+            ler.nextLine();
+            String nome;
             if (numero == 1) {
 
                 for (int i = 0; i <= 5; i++) {
+
                     if (i % 2 == 0) {
-                        dogs.add(new Cachorro(ler.next(), ler.next()));
+                        nome = ler.nextLine();
+                        if (nome.length() >= 3) {
+                            dogs.add(new Cachorro(nome, ler.next()));
+                        } else {
+                            System.out.println("Nome muito pequeno, use ao menos 3 caracteres! Digite novamente.");
+                            i--;
+                            continue;
+                        }
                     } else {
                         dogs.add(new cachorroAdestrado(ler.next(), ler.next()));
                         cont++;
