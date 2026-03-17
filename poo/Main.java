@@ -293,7 +293,7 @@ public class Main {
         // =============================================================================
         // =============================================================================
 
-        Scanner ler = new Scanner(System.in);
+        /*Scanner ler = new Scanner(System.in);
         int num = -1;
         int cont = 0;
 
@@ -352,4 +352,26 @@ public class Main {
         }
     }
 
+}*/
+
+
+Scanner ler = new Scanner(System.in);
+
+    ArrayList<Funcionario> funcionarios = new ArrayList<>();
+    String nome;
+    double salario;
+    Gerente g = new Gerente(null, nome, nome)
+    for(int i = 0; i < 2; i++){
+        if(i % 2 = 0){
+        System.out.println("digite o nome do gerente");
+        nome = ler.nextLine();
+        salario = ler.nextDouble();     
+        funcionarios.add(new Gerente(nome, salario));
+        }
+    }
+
+
+
+    }   
 }
+

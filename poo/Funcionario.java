@@ -1,25 +1,26 @@
 package poo;
 
-
+import java.util.UUID;
 public class Funcionario{
 
-    private int matricula;
+    private Double salario;
     private String nome;
-    private Departamento departamento;
-
-    public Funcionario(int matricula, String nome, Departamento departamento){
-        this.matricula = matricula;
+    public static int contador = 0;
+    final String id;
+    public Funcionario(Double salario, String nome){
+        this.salario = salario;
         this.nome = nome;
-        this.departamento = departamento;
+        contador++;
+        this.id = UUID.randomUUID().toString();
     }
 
 
-    public int getMatricula(){
-        return this.matricula;
+    public Double getSalario(){
+        return this.salario;
     }
 
-    public void setMatricula(int matricula){
-        this.matricula = matricula;
+    public void setSalario(Double salario){
+        this.salario = salario;
     }
 
     public String getNome(){
@@ -30,18 +31,18 @@ public class Funcionario{
         this.nome = nome;
     }
 
-    public Departamento getDepartamento(){
-        return this.departamento;
-
+    public String getId(){
+        return this.id;
     }
-
-    public void setDepartamento(Departamento departamento){
-        this.departamento = departamento;
+    
+    public Double calcularBonus(){
+        return this.salario * 0.1;
     }
 
     public String toString(){
-        return "Funcionário: " + matricula + " - " + nome + " - " + departamento.getNome();
+        return "Funcionário: " + nome + " - " + salario + " - " + id + " - " + calcularBonus();
     }
+
 
     
 
