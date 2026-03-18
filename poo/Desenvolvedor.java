@@ -2,8 +2,8 @@ package poo;
 
 public class Desenvolvedor extends Funcionario {
     private String linguagem;
-    
-    public Desenvolvedor(Double salario, String nome, String linguagem){
+
+    public Desenvolvedor(Double salario, String nome, String linguagem) {
         super(salario, nome);
         this.linguagem = linguagem;
     }
@@ -16,19 +16,20 @@ public class Desenvolvedor extends Funcionario {
         this.linguagem = linguagem;
     }
 
-    public Double getSalario(){
+    public Double getSalario() {
         return super.getSalario();
     }
 
-    public String getNome(){
+    public String getNome() {
         return super.getNome();
     }
 
-    public Double calcularBonusDesenvolvedor(){
-        return this.getSalario() * 0.15;
+    public Double calcularBonusDesenvolvedor() {
+        return (this.getSalario() * 0.15) + this.getSalario();
     }
 
-    public String toString(){
-        return "Desenvolvedor: " + this.getNome() + " - " + this.getSalario() + " - " + this.getId() + " - " + calcularBonusDesenvolvedor() + " - " + linguagem;
+    public String toString() {
+        return "Desenvolvedor: " + this.getNome() + " - " + this.getSalario() + " - " + this.getId() + " - "
+                + calcularBonusDesenvolvedor() + " - " + linguagem;
     }
 }

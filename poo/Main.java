@@ -293,85 +293,185 @@ public class Main {
         // =============================================================================
         // =============================================================================
 
-        /*Scanner ler = new Scanner(System.in);
-        int num = -1;
-        int cont = 0;
+        /*
+         * Scanner ler = new Scanner(System.in);
+         * int num = -1;
+         * int cont = 0;
+         * 
+         * ArrayList<Cachorro> dogs = new ArrayList<>();
+         * while (num != 0) {
+         * 
+         * System.out.println("1- Cadastrar Cão | 2- Listar Todos | 3- Sair");
+         * int numero = ler.nextInt();
+         * ler.nextLine();
+         * String nome;
+         * if (numero == 1) {
+         * 
+         * for (int i = 0; i <= 5; i++) {
+         * 
+         * if (i % 2 == 0) {
+         * nome = ler.nextLine();
+         * if (nome.length() >= 3) {
+         * dogs.add(new Cachorro(nome, ler.next()));
+         * } else {
+         * System.out.
+         * println("Nome muito pequeno, use ao menos 3 caracteres! Digite novamente.");
+         * i--;
+         * continue;
+         * }
+         * } else {
+         * dogs.add(new cachorroAdestrado(ler.next(), ler.next()));
+         * cont++;
+         * }
+         * }
+         * } else if (numero == 2) {
+         * for (Cachorro d : dogs) {
+         * imprime(d);
+         * }
+         * System.out.println("tem " + cont + " cachorros adestrados!");
+         * } else if (numero == 3) {
+         * num = 0;
+         * } else {
+         * System.out.println("Número inválido!");
+         * }
+         * }
+         * }
+         * 
+         * public static void imprime(Cachorro c) {
+         * System.out.println("Nome do cachorro:" + c.getNome());
+         * System.out.println("Raça:" + c.getRaca());
+         * c.latir();
+         * c.comer();
+         * c.dormir();
+         * if (c instanceof cachorroAdestrado) {
+         * cachorroAdestrado ad = (cachorroAdestrado) c;
+         * ad.deitar();
+         * ad.rolar();
+         * ad.fingirDeMorto();
+         * System.out.println("\n\n");
+         * } else {
+         * System.out.println("Cachorro sem adrestamento!\n\n");
+         * }
+         * }
+         * 
+         * }
+         */
 
-        ArrayList<Cachorro> dogs = new ArrayList<>();
+        Scanner ler = new Scanner(System.in);
+
+        ArrayList<Funcionario> funcionarios = new ArrayList<>();
+
+        for (int i = 0; i < 4; i++) {
+            if (i % 2 == 0) {
+                System.out.println("*Gerente* = digite o salario, nome e departamento:");
+                Double s = ler.nextDouble();
+                ler.nextLine();
+                String n = ler.nextLine();
+                String d = ler.nextLine();
+                funcionarios.add(new Gerente(s, n, d));
+            } else {
+                System.out.println("*Desenvolvedor* = digite o salario, nome e linguagem de programação:");
+                Double s = ler.nextDouble();
+                ler.nextLine();
+                String n = ler.nextLine();
+                String l = ler.nextLine();
+                funcionarios.add(new Desenvolvedor(s, n, l));
+            }
+        }
+        int num = -1;
         while (num != 0) {
 
-            System.out.println("1- Cadastrar Cão | 2- Listar Todos | 3- Sair");
-            int numero = ler.nextInt();
+            System.out.println(
+                    "Digite 1 = Exibir Funcionarios | Digite 2 = Pesquisar Funcionario | Digite 3 = Buscar funcionario por ID | Digite 4 = Remover Funcionario | Digite 5 = Dar aumento de 10% para um funcionario | (Sair = 0)");
+            num = ler.nextInt();
             ler.nextLine();
-            String nome;
-            if (numero == 1) {
-
-                for (int i = 0; i <= 5; i++) {
-
-                    if (i % 2 == 0) {
-                        nome = ler.nextLine();
-                        if (nome.length() >= 3) {
-                            dogs.add(new Cachorro(nome, ler.next()));
-                        } else {
-                            System.out.println("Nome muito pequeno, use ao menos 3 caracteres! Digite novamente.");
-                            i--;
-                            continue;
-                        }
-                    } else {
-                        dogs.add(new cachorroAdestrado(ler.next(), ler.next()));
-                        cont++;
+            boolean achei = false;
+            if (num == 2) {
+                System.out.println("Digite o nome do Funcionario:");
+                String nomeFun = ler.nextLine();
+                achei = false;
+                for (Funcionario no : funcionarios) {
+                    if (no.getNome().equalsIgnoreCase(nomeFun)) {
+                        imprime(no);
+                        achei = true;
+                        break;
                     }
                 }
-            } else if (numero == 2) {
-                for (Cachorro d : dogs) {
-                    imprime(d);
+            } else if (num == 1) {
+                achei = false;
+                for (Funcionario f : funcionarios) {
+                    imprime(f);
+                    achei = true;
                 }
-                System.out.println("tem " + cont + " cachorros adestrados!");
-            } else if (numero == 3) {
-                num = 0;
+            } else if (num == 3) {
+                achei = false;
+                System.out.println("Digite o ID de registro:");
+                int idRegistro = ler.nextInt();
+                ler.nextLine();
+                for (Funcionario reg : funcionarios) {
+                    if (reg.getRegistro() == idRegistro) {
+                        imprime(reg);
+                        achei = true;
+                        break;
+                    }
+                }
+            } else if (num == 4) {
+                System.out.println("Digite o ID de Registro que você que remover:");
+                int alvo = ler.nextInt();
+                Funcionario remover = null;
+                for (Funcionario rem : funcionarios) {
+                    if (rem.getRegistro() == alvo) {
+                        remover = rem;
+                        achei = true;
+                        break;
+                    }
+                }
+                if (remover != null && achei != false) {
+                    funcionarios.remove(remover);
+                    System.out.println("Funcionario removido!");
+                }
+            } else if (num == 5) {
+                System.out.println("Digite o ID de Registro que você quer dar o aumento:");
+                int alvo = ler.nextInt();
+                ler.nextLine();
+                for (Funcionario aum : funcionarios) {
+                    if (aum.getRegistro() == alvo) {
+                        aum.setSalario(aum.getSalario() * 0.1 + aum.getSalario());
+                        achei = true;
+                        break;
+                    }
+                }
+                if (achei == true) {
+                    System.out.println("Salario atualizado!");
+                }
             } else {
-                System.out.println("Número inválido!");
+
+                System.out.println("Número inválido.");
+            }
+
+            if (achei == false && num != 0) {
+                System.out.println("Não foi encontrado nada!");
             }
         }
     }
 
-    public static void imprime(Cachorro c) {
-        System.out.println("Nome do cachorro:" + c.getNome());
-        System.out.println("Raça:" + c.getRaca());
-        c.latir();
-        c.comer();
-        c.dormir();
-        if (c instanceof cachorroAdestrado) {
-            cachorroAdestrado ad = (cachorroAdestrado) c;
-            ad.deitar();
-            ad.rolar();
-            ad.fingirDeMorto();
-            System.out.println("\n\n");
+    public static void imprime(Funcionario fun) {
+        System.out.println(fun.getNome());
+        System.out.println(fun.getSalario());
+        if (fun instanceof Gerente) {
+            Gerente g = (Gerente) fun;
+            System.out.println();
+            System.out.println(g.calcularBonusGerente());
+            System.out.println(g.toString());
+        } else if (fun instanceof Desenvolvedor) {
+            Desenvolvedor d = (Desenvolvedor) fun;
+            System.out.println();
+            System.out.println(d.calcularBonusDesenvolvedor());
+            System.out.println(d.toString());
         } else {
-            System.out.println("Cachorro sem adrestamento!\n\n");
+            System.out.println();
+            System.out.println(fun.calcularBonus());
+            System.out.println(fun.toString());
         }
     }
-
-}*/
-
-
-Scanner ler = new Scanner(System.in);
-
-    ArrayList<Funcionario> funcionarios = new ArrayList<>();
-    String nome;
-    double salario;
-    Gerente g = new Gerente(null, nome, nome)
-    for(int i = 0; i < 2; i++){
-        if(i % 2 = 0){
-        System.out.println("digite o nome do gerente");
-        nome = ler.nextLine();
-        salario = ler.nextDouble();     
-        funcionarios.add(new Gerente(nome, salario));
-        }
-    }
-
-
-
-    }   
 }
-
