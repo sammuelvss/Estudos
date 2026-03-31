@@ -1,18 +1,18 @@
-package poo;
+package poo1;
 
-public class pessoaFisica extends Pessoa {
+public class pessoaJuridica extends Pessoa {
 
-    private String cpf;
-    public pessoaFisica(String nome, int idade, String cpf) {
+    private String cnpj;
+    public pessoaJuridica(String nome, int idade, String cnpj) {
         super(nome, idade);
-        this.cpf = cpf;
+        this.cnpj = cnpj;
     }
-    public String getCpf() {    
-        return cpf;
+    public String getCnpj() {    
+        return cnpj;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 
     public String getNome() {
@@ -30,7 +30,5 @@ public class pessoaFisica extends Pessoa {
     public void setIdade(int idade) {
         super.setIdade(idade);
     }
-
-} 
     
-
+}

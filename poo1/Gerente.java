@@ -1,4 +1,4 @@
-package poo;
+package poo1;
 
 public class Gerente extends Funcionario {
     private String departamento;

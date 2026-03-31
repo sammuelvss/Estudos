@@ -1,4 +1,4 @@
-package poo;
+package poo1;
 public class Pessoa {
     private String nome;
     private int idade;
